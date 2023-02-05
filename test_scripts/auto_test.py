@@ -15,7 +15,7 @@ os.environ['NCCL_ALGO'] = "RING"
 os.environ['TRAVERSE_TIMES'] = "10"
 os.environ['TOLERANT_UNPROGRESSED_CNT'] = "10000"
 os.environ['BASE_CTX_SWITCH_THRESHOLD'] = "80"
-os.environ['BOUNS_SWITCH_4_PROCESSED_COLL'] = "0"
+os.environ['NUM_TRY_TASKQ_HEAD'] = "5"
 os.environ['DEV_TRY_ROUND'] = "10"
 
 # 设置超参数
