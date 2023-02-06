@@ -68,7 +68,7 @@ int main(int argc,char* argv[]){
         }
 
         pos=0;
-        while((pos=inputLine.find("totalProgressed7SwithchCnt=",pos) ) != -1){
+        while((pos=inputLine.find("totalProgressed7SwitchCnt=",pos) ) != -1){
             pos += 27;
             int number = 0;
             while(inputLine[pos]>='0' &&inputLine[pos]<='9'){

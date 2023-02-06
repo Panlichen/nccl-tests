@@ -80,8 +80,8 @@ if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 2 ]; then
         export CUDA_VISIBLE_DEVICES=4,5
     fi
-    export NITER=5
-    export NBYTES=64
+    export NITER=8
+    export NBYTES=310M
     export WARMITER=0
     export MITER=1
 elif [ "$BINARY" == "PERF" ];then

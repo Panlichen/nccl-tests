@@ -396,11 +396,11 @@ for MY_NUM_DEV in ncards:
 
             op['cntSheet'].write(1+cnt*30,1,"totalCtxSaveCnt_avg",style)
             op['cntSheet'].write(1+cnt*30,2,"totalCtxLoadCnt_avg",style)
-            op['cntSheet'].write(1+cnt*30,3,"totalProgressed7SwithchCnt_avg",style)
+            op['cntSheet'].write(1+cnt*30,3,"totalProgressed7SwitchCnt_avg",style)
             op['cntSheet'].write(1+cnt*30,4,"totalUnprogressedQuitCnt_avg",style)
             op['cntSheet'].write(1+cnt*30,6,"totalCtxSaveCnt",style)
             op['cntSheet'].write(1+cnt*30,24,"totalCtxLoadCnt",style)
-            op['cntSheet'].write(1+cnt*30,42,"totalProgressed7SwithchCnt",style)
+            op['cntSheet'].write(1+cnt*30,42,"totalProgressed7SwitchCnt",style)
             op['cntSheet'].write(1+cnt*30,60,"totalUnprogressedQuitCnt",style)
 
             with  open(op['ofccl_totalCnt_path']) as f:
@@ -419,7 +419,7 @@ for MY_NUM_DEV in ncards:
                     for j in range(1,len(numbers)):
                         op['cntSheet'].write(i+2+cnt*30,23+j,numbers[j])
                     line = f.readline()
-                # totalProgressed7SwithchCnt
+                # totalProgressed7SwitchCnt
                 for i in range(0,25): 
                     numbers = line.split()
                     op['cntSheet'].write(i+2+cnt*30,3,numbers[0])
