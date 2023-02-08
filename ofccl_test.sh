@@ -22,14 +22,14 @@ export NCCL_ALGO=Ring
 export CHECK=0
 export SHOW_ALL_PREPARED_COLL=0
 
-export TRAVERSE_TIMES=10
+export RECV_SUCCESS_FACTOR=5
+export RECV_SUCCESS_THRESHOLD=10000
 export TOLERANT_UNPROGRESSED_CNT=10000
 export BASE_CTX_SWITCH_THRESHOLD=80
-export NUM_TRY_TASKQ_HEAD=5
+export NUM_TRY_TASKQ_HEAD=6
 export DEV_TRY_ROUND=10
 export CHECK_REMAINING_SQE_INTERVAL=10000
 export DEBUG_FILE="/home/panlichen/work2/ofccl/log/oneflow_cpu_rank_"
-
 rm -rf /home/panlichen/work2/ofccl/log
 mkdir -p /home/panlichen/work2/ofccl/log
 
@@ -37,7 +37,8 @@ mkdir -p /home/panlichen/work2/ofccl/log
 # export TOLERANT_FAIL_CHECK_SQ_CNT=5000
 # export CNT_BEFORE_QUIT=5
 
-echo TRAVERSE_TIMES=$TRAVERSE_TIMES
+echo RECV_SUCCESS_FACTOR=$RECV_SUCCESS_FACTOR
+echo RECV_SUCCESS_THRESHOLD=$RECV_SUCCESS_THRESHOLD
 echo TOLERANT_UNPROGRESSED_CNT=$TOLERANT_UNPROGRESSED_CNT
 echo BASE_CTX_SWITCH_THRESHOLD=$BASE_CTX_SWITCH_THRESHOLD
 echo NUM_TRY_TASKQ_HEAD=$NUM_TRY_TASKQ_HEAD
@@ -80,7 +81,7 @@ if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 2 ]; then
         export CUDA_VISIBLE_DEVICES=4,5
     fi
-    export NITER=8
+    export NITER=6
     export NBYTES=310M
     export WARMITER=0
     export MITER=1

@@ -12,7 +12,7 @@ os.environ['LD_LIBRARY_PATH'] = "/home/panlichen/zrk/work/ofccl/build/lib"
 os.environ['NCCL_PROTO'] = "Simple"
 os.environ['NCCL_ALGO'] = "RING"
 
-os.environ['TRAVERSE_TIMES'] = "10"
+os.environ['RECV_SUCCESS_FACTOR'] = "5"
 os.environ['TOLERANT_UNPROGRESSED_CNT'] = "10000"
 os.environ['BASE_CTX_SWITCH_THRESHOLD'] = "80"
 os.environ['NUM_TRY_TASKQ_HEAD'] = "5"
