@@ -8,7 +8,7 @@ font.height = 20*16
 style.font = font
 # 设置环境变量
 #os.environ['LD_LIBRARY_PATH'] = "/home/panlichen/work2/ofccl/build/lib"
-os.environ['LD_LIBRARY_PATH'] = "/home/panlichen/zrk/work/ofccl/build/lib"
+os.environ['LD_LIBRARY_PATH'] = "/home/panlichen/zrk/work/ofcclProj/ofccl/build/lib"
 os.environ['NCCL_PROTO'] = "Simple"
 os.environ['NCCL_ALGO'] = "RING"
 
@@ -19,15 +19,15 @@ os.environ['NUM_TRY_TASKQ_HEAD'] = "5"
 os.environ['DEV_TRY_ROUND'] = "10"
 
 # 设置超参数
-runNcclTest = True # 运行nccl测试,仅输出原始结果
-staticNccl = True # 运行统计，输出中间结果
+runNcclTest = False# 运行nccl测试,仅输出原始结果
+staticNccl = False # 运行统计，输出中间结果
 collectNcclResult  = True# 收集nccl测试结果，写入xls
 
 
-runOfcclTest = True# 运行ofccl测试
-staticOfccl = True # 运行统计，输出中间结果
-staticOfcclExtral = True# 对ofccl的额外输出进行统计
-collectOfcclResult = True# 收集ofccl测试结果，写入xls
+runOfcclTest = False# 运行ofccl测试
+staticOfccl = False # 运行统计，输出中间结果
+staticOfcclExtral = False# 对ofccl的额外输出进行统计
+collectOfcclResult = False# 收集ofccl测试结果，写入xls
 
 buffer_sizes = ["64", "128", "256", "512", "1K", "2K", "4K", "8K", "16K", "32K", "64K", "128K", "256K", "512K", "1M", "2M", "4M", "8M", "16M", "32M", "64M", "128M", "256M", "512M", "1G"]
 
@@ -53,13 +53,15 @@ if TINY_TEST == 1:
     collectNcclResult  = False # 收集nccl测试结果，写入xls
     ncards = [2]
     # buffer_sizes = ["64", "128", "256", "512", "1K"]
-NCCL_TIER=[1,2,3]
+NCCL_ITER=[1,2,3,4,5,6]
 OFCCL_ITER=[1,2,3,4,5,6]
 resultXlsName=host+"_"+DATE+"_"+NCCL_ORDER+"_M"+str(m)+"n"+str(n)+"w"+str(w)+".xls"
 
 # static 
 os.system("g++ ./nccl/static_nccl.cpp -o ./nccl/static_nccl.out")
 os.system("g++ ./nccl/static_time.cpp -o ./nccl/static_time.out")
+os.system("g++ ./nccl/static_nccl_bw_order.cpp -o ./nccl/static_nccl_bw_order.out")
+os.system("g++ ./nccl/static_nccl_tm_order.cpp -o ./nccl/static_nccl_tm_order.out")
 os.system("g++ ./ofccl/static_ofccl_time.cpp -o ./ofccl/static_ofccl_time.out")
 os.system("g++ ./ofccl/static_ofccl_bw.cpp -o ./ofccl/static_ofccl_bw.out")
 os.system("g++ ./ofccl/static_ofccl_QE.cpp -o ./ofccl/static_ofccl_QE.out")
@@ -123,27 +125,36 @@ for MY_NUM_DEV in ncards:
     # 统计结果  
     # allReduce  
     AR['nccl_bw_path']=NCCL_RES_DIR+"/result_nccl_allReduce_"+str(MY_NUM_DEV)+"cards.txt"  
-    AR['nccl_time_path']=NCCL_RES_DIR+"/result_nccl_allReduce_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    AR['nccl_tm_path']=NCCL_RES_DIR+"/result_nccl_allReduce_"+str(MY_NUM_DEV)+"cards_time.txt"  
+    AR['nccl_bw_order_path']=NCCL_RES_DIR+"/result_nccl_allReduce_order_"+str(MY_NUM_DEV)+"cards.txt"  
+    AR['nccl_tm_order_path']=NCCL_RES_DIR+"/result_nccl_allReduce_order_"+str(MY_NUM_DEV)+"cards_time.txt"  
     # allGather
     AG['nccl_bw_path']=NCCL_RES_DIR+"/result_nccl_allGather_"+str(MY_NUM_DEV)+"cards.txt"  
-    AG['nccl_time_path']=NCCL_RES_DIR+"/result_nccl_allGather_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    AG['nccl_tm_path']=NCCL_RES_DIR+"/result_nccl_allGather_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    AG['nccl_bw_order_path']=NCCL_RES_DIR+"/result_nccl_allGather_order_"+str(MY_NUM_DEV)+"cards.txt"  
+    AG['nccl_tm_order_path']=NCCL_RES_DIR+"/result_nccl_allGather_order_"+str(MY_NUM_DEV)+"cards_time.txt"   
     # broadcast
     B['nccl_bw_path']=NCCL_RES_DIR+"/result_nccl_broadcast_"+str(MY_NUM_DEV)+"cards.txt"  
-    B['nccl_time_path']=NCCL_RES_DIR+"/result_nccl_broadcast_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    B['nccl_tm_path']=NCCL_RES_DIR+"/result_nccl_broadcast_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    B['nccl_bw_order_path']=NCCL_RES_DIR+"/result_nccl_broadcast_order_"+str(MY_NUM_DEV)+"cards.txt"  
+    B['nccl_tm_order_path']=NCCL_RES_DIR+"/result_nccl_broadcast_order_"+str(MY_NUM_DEV)+"cards_time.txt"
     # reduce
     R['nccl_bw_path']=NCCL_RES_DIR+"/result_nccl_reduce_"+str(MY_NUM_DEV)+"cards.txt"  
-    R['nccl_time_path']=NCCL_RES_DIR+"/result_nccl_reduce_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    R['nccl_tm_path']=NCCL_RES_DIR+"/result_nccl_reduce_"+str(MY_NUM_DEV)+"cards_time.txt"   
+    R['nccl_bw_order_path']=NCCL_RES_DIR+"/result_nccl_reduce_order_"+str(MY_NUM_DEV)+"cards.txt"  
+    R['nccl_tm_order_path']=NCCL_RES_DIR+"/result_nccl_reduce_order_"+str(MY_NUM_DEV)+"cards_time.txt"
     # reduceScatter
     RS['nccl_bw_path']=NCCL_RES_DIR+"/result_nccl_reduceScatter_"+str(MY_NUM_DEV)+"cards.txt"  
-    RS['nccl_time_path']=NCCL_RES_DIR+"/result_nccl_reduceScatter_"+str(MY_NUM_DEV)+"cards_time.txt"      
-
+    RS['nccl_tm_path']=NCCL_RES_DIR+"/result_nccl_reduceScatter_"+str(MY_NUM_DEV)+"cards_time.txt"      
+    RS['nccl_bw_order_path']=NCCL_RES_DIR+"/result_nccl_reduceScatter_order_"+str(MY_NUM_DEV)+"cards.txt"  
+    RS['nccl_tm_order_path']=NCCL_RES_DIR+"/result_nccl_reduceScatter_order_"+str(MY_NUM_DEV)+"cards_time.txt" 
     if staticNccl == True:
         for op in [AR,AG,B,R,RS]:
             os.system("echo  $(date +%F%n%T)>>"+op['nccl_bw_path'])
-            os.system("echo  $(date +%F%n%T)>>"+op['nccl_time_path'])
+            os.system("echo  $(date +%F%n%T)>>"+op['nccl_tm_path'])
 
 
-    for iter in NCCL_TIER:
+    for iter in NCCL_ITER:
         # raw data
         AR['nccl_rawData'] = NCCL_RES_DIR+"/nccl_allReduce_"+str(iter)+"_n"+str(n)+"_w"+str(w)+"_m"+str(m)+".txt"
         AG['nccl_rawData'] = NCCL_RES_DIR+"/nccl_allGather_"+str(iter)+"_n"+str(n)+"_w"+str(w)+"_m"+str(m)+".txt"
@@ -161,8 +172,11 @@ for MY_NUM_DEV in ncards:
         if staticNccl:
             for op in [AR,AG,B,R,RS]:    
                 os.system("./nccl/static_nccl.out " +op['nccl_rawData'] +" " +op['nccl_bw_path']) 
-                os.system("./nccl/static_time.out " +op['nccl_rawData'] +" " +op['nccl_time_path'])
-
+                os.system("./nccl/static_time.out " +op['nccl_rawData'] +" " +op['nccl_tm_path'])
+    if staticNccl:
+       for op in [AR,AG,B,R,RS]:
+            os.system("./nccl/static_nccl_bw_order.out "+op['nccl_bw_path']+" "+op['nccl_bw_order_path']+" "+ str(len(NCCL_ITER)))
+            os.system("./nccl/static_nccl_tm_order.out "+op['nccl_tm_path']+" "+op['nccl_tm_order_path']+" "+ str(len(NCCL_ITER)))
             
                    
     if collectNcclResult :
@@ -194,7 +208,7 @@ for MY_NUM_DEV in ncards:
                 op['bwSheet'].write(2+i+cnt*30, 15, xlwt.Formula('SUM(M'+str(2+i+cnt*30+1)+',N'+str(2+i+cnt*30+1)+',O'+str(2+i+cnt*30+1)+')/3'),style) 
             
             # time  
-            with open(op['nccl_time_path']) as f2:
+            with open(op['nccl_tm_path']) as f2:
                 content2 = f2.read()
             times = content2.split()
 
