@@ -35,7 +35,7 @@ fi
 
 if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
-        export CUDA_VISIBLE_DEVICES=0,1,4,5
+        export CUDA_VISIBLE_DEVICES=2,3,6,7
     fi
     export NITER=5
     export NBYTES=$3
@@ -68,7 +68,7 @@ export NCU_FILE="nccl"
 if [ -z $RUN_TYPE ];then
     RUN_TYPE="PURE"
     # RUN_TYPE="GDB"
-    RUN_TYPE="NSYS"
+    # RUN_TYPE="NSYS"
     # RUN_TYPE="NCU"
 fi
 
