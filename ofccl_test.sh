@@ -80,7 +80,7 @@ fi
 
 if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
-        export CUDA_VISIBLE_DEVICES=0,1,4,5
+        export CUDA_VISIBLE_DEVICES=2,3,6,7
     fi
     if [ $MY_NUM_DEV = 2 ]; then
         export CUDA_VISIBLE_DEVICES=4,5

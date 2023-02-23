@@ -35,11 +35,14 @@ CUDA_MAJOR = $(shell echo $(CUDA_VERSION) | cut -d "." -f 1)
 # endif
 
 CUDA_GENCODE_3080   = -gencode=arch=compute_86,code=sm_86
+CUDA_GENCODE_a100   = -gencode=arch=compute_80,code=sm_80
 CUDA_GENCODE_2080   = -gencode=arch=compute_75,code=sm_75
 
 CARDNAME ?= 3080
 ifeq ($(CARDNAME), 3080)
 NVCC_GENCODE ?= $(CUDA_GENCODE_3080) $(CUDA_PTX_INUSE)
+else ifeq ($(CARDNAME), a100)
+NVCC_GENCODE ?= $(CUDA_GENCODE_a100) $(CUDA_PTX_INUSE)
 else
 NVCC_GENCODE ?= $(CUDA_GENCODE_2080) $(CUDA_PTX_INUSE)
 endif
