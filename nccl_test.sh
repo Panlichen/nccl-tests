@@ -9,6 +9,8 @@ export NCCL_ALGO=Ring
 # export NCCL_MAX_NCHANNELS=1
 # export NCCL_MIN_NCHANNELS=1
 # export NCCL_NTHREADS=64
+rm -rf /home/panlichen/work2/ofccl/log
+mkdir -p /home/panlichen/work2/ofccl/log/nsys
 
 if [ -z $BINARY ];then
     BINARY="DEBUG"
@@ -36,7 +38,7 @@ if [ "$BINARY" == "DEBUG" ];then
         export CUDA_VISIBLE_DEVICES=0,1,4,5
     fi
     export NITER=5
-    export NBYTES=64M
+    export NBYTES=$3
     export WARMITER=2
     export MITER=1
     export CHECK=0
@@ -45,7 +47,7 @@ elif [ "$BINARY" == "PERF" ];then
         export CUDA_VISIBLE_DEVICES=0,1,4,5
     fi
     export NITER=4
-    export NBYTES=8K
+    export NBYTES=$3
     export WARMITER=2
     export MITER=4
     export CHECK=0
@@ -56,17 +58,17 @@ elif [ "$BINARY" == "MS" ];then
     # export NITER=200
     # export SHOW_ALL_PREPARED_COLL=1
     # export WARMITER=0
-    # export NBYTES=8K
+    # export NBYTES=$3
     # export MITER=4
 fi
 
-export NSYS_FILE="nccl"
+export NSYS_FILE="nccl_"$MY_NUM_DEV"card_"$3
 export NCU_FILE="nccl"
 
 if [ -z $RUN_TYPE ];then
     RUN_TYPE="PURE"
     # RUN_TYPE="GDB"
-    # RUN_TYPE="NSYS"
+    RUN_TYPE="NSYS"
     # RUN_TYPE="NCU"
 fi
 
