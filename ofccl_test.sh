@@ -72,6 +72,7 @@ if [ -z $BINARY ];then
     BINARY="DEBUG"
     # BINARY="MS"
     # BINARY="PERF"
+    BINARY="CHAOS"
 fi
 
 if [ "$BINARY" == "DEBUG" ];then
@@ -103,6 +104,17 @@ elif [ "$BINARY" == "MS" ];then
     export WARMITER=0
     export NBYTES=$3
     export MITER=4
+    export CHECK=0
+elif [ "$BINARY" == "CHAOS" ];then
+    target="./build/ofccl_all_reduce_chaos_order_perf"
+    if [ $MY_NUM_DEV = 4 ]; then
+        export CUDA_VISIBLE_DEVICES=0,1,4,5
+    fi
+    export NITER=5
+    export SHOW_ALL_PREPARED_COLL=1
+    export WARMITER=2
+    export NBYTES=$3
+    export MITER=1
     export CHECK=0
 fi
 
@@ -163,5 +175,5 @@ elif [ "$RUN_TYPE" == "NCU" ];then
 fi
 
 echo cmd=$cmd
-$cmd #> /home/panlichen/work2/ofccl/log/ofccl.log
+$cmd > /home/panlichen/work2/ofccl/log/ofccl.log
 
