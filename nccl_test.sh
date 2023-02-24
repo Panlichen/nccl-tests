@@ -35,7 +35,7 @@ fi
 
 if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
-        export CUDA_VISIBLE_DEVICES=2,3,6,7
+        export CUDA_VISIBLE_DEVICES=0,1,2,3
     fi
     export NITER=5
     export NBYTES=$3
