@@ -77,7 +77,11 @@ fi
 
 if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
-        export CUDA_VISIBLE_DEVICES=0,1,2,3
+        if [ "$CARDNAME" = "a100" ]; then
+            export CUDA_VISIBLE_DEVICES=0,1,2,3
+        else
+            export CUDA_VISIBLE_DEVICES=0,1,4,5
+        fi
     fi
     if [ $MY_NUM_DEV = 2 ]; then
         export CUDA_VISIBLE_DEVICES=4,5
@@ -110,9 +114,9 @@ elif [ "$BINARY" == "CHAOS" ];then
     if [ $MY_NUM_DEV = 4 ]; then
         export CUDA_VISIBLE_DEVICES=0,1,4,5
     fi
-    export NITER=5
+    export NITER=200
     export SHOW_ALL_PREPARED_COLL=1
-    export WARMITER=2
+    export WARMITER=0
     export NBYTES=$3
     export MITER=1
     export CHECK=0

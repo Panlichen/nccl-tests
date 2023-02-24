@@ -31,14 +31,14 @@ size_t countList[161] = {256, 147456, 2048, 1024, 65536, 147456, 524288, 1048576
 
 
 int idxList[8][MULTI_ITERS] = {
-  {5, 7, 0, 2, 1, 6, 4, 3},
-  {1, 6, 5, 0, 7, 3, 2, 4},
-  {6, 2, 3, 1, 5, 0, 7, 4},
-  {0, 5, 2, 6, 4, 1, 3, 7},
-  {7, 1, 4, 3, 6, 2, 0, 5},
-  {2, 0, 1, 4, 3, 7, 5, 6},
-  {3, 4, 6, 7, 0, 5, 1, 2},
-  {4, 3, 7, 5, 2, 6, 1, 0}
+  {0, 5, 2, 6, 4, 1, 7, 3}, 
+  {1, 0, 3, 2, 5, 4, 6, 7}, 
+  {2, 1, 0, 3, 6, 7, 4, 5}, 
+  {3, 2, 1, 0, 7, 6, 5, 4}, 
+  {4, 3, 5, 7, 0, 2, 1, 6}, 
+  {5, 6, 7, 4, 1, 0, 3, 2}, 
+  {6, 7, 4, 1, 3, 5, 2, 0}, 
+  {7, 4, 6, 5, 2, 3, 0, 1}
 };
 
 
@@ -844,7 +844,7 @@ testResult_t BenchTime(struct threadArgs *args, ncclDataType_t type, ncclRedOp_t
     // 在这个地方改变miter的遍历顺序，起到乱序调用的作用。
     for (int miter_idx = 0; miter_idx < multi_iters; miter_idx++) { // for (int miter = 0; miter < multi_iters; miter++) {
       int miter = idxList[cudaDev][miter_idx];
-      OFTEST_LOG(TEST, "<%lu> Rank<%d>, invoke %dth startColl iter for coll_id = %d", pthread_self(), cudaDev, iter, miter);
+      // OFTEST_LOG(TEST, "<%lu> Rank<%d>, invoke %dth startColl iter for coll_id = %d", pthread_self(), cudaDev, iter, miter);
       seenCqe[miter] = 0;
       usleep(200);
       TESTCHECK(startColl(args, type, op, root, in_place,
