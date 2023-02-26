@@ -19,13 +19,13 @@ os.environ['NUM_TRY_TASKQ_HEAD'] = "5"
 os.environ['DEV_TRY_ROUND'] = "10"
 
 # 设置超参数
-runNcclTest = True# 运行nccl测试,仅输出原始结果
-staticNccl = True # 运行统计，输出中间结果
+runNcclTest =False# 运行nccl测试,仅输出原始结果
+staticNccl = False # 运行统计，输出中间结果
 collectNcclResult  = True# 收集nccl测试结果，写入xls
 
 
-runOfcclTest = True# 运行ofccl测试
-staticOfccl = True # 运行统计，输出中间结果
+runOfcclTest = False# 运行ofccl测试
+staticOfccl = False # 运行统计，输出中间结果
 staticOfcclExtral = False# 对ofccl的额外输出进行统计
 collectOfcclResult = True# 收集ofccl测试结果，写入xls
 
@@ -195,11 +195,11 @@ for MY_NUM_DEV in ncards:
             for k in [0,1,2]:
                 op['bwSheet'].write(1+cnt*30,1+k,'nccl-algbw'+str(k),style)
                 for i in range(0,25):
-                    op['bwSheet'].write(2+i+cnt*30,1+k,bw[i+k*50+2],style)
+                    op['bwSheet'].write(2+i+cnt*30,1+k,bw[i+k*50],style)
 
                 op['bwSheet'].write(1+cnt*30,12+k,'nccl-busbw'+str(k),style)
                 for i in range(0,25):
-                    op['bwSheet'].write(2+i+cnt*30,12+k,bw[i+k*50+25+2],style)
+                    op['bwSheet'].write(2+i+cnt*30,12+k,bw[i+k*50+25],style)
             # avg
             op['bwSheet'].write(1+cnt*30, 4, 'avg-algbw',style)
             op['bwSheet'].write(1+cnt*30, 15, 'avg-busbw',style)
@@ -218,7 +218,7 @@ for MY_NUM_DEV in ncards:
             for k in [0,1,2]:
                 op['tmSheet'].write(1+cnt*30,1+k,'nccl-'+str(k),style)
                 for i in range(0,25):
-                    op['tmSheet'].write(2+i+cnt*30,1+k,times[i+k*25+2],style)
+                    op['tmSheet'].write(2+i+cnt*30,1+k,times[i+k*25],style)
             # avg 
             op['tmSheet'].write(1+cnt*30, 4, 'avg-nccl',style)
             for i in range(0,25):
