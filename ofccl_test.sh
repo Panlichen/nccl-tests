@@ -72,7 +72,7 @@ if [ -z $BINARY ];then
     BINARY="DEBUG"
     # BINARY="MS"
     # BINARY="PERF"
-    BINARY="CHAOS"
+    # BINARY="CHAOS"
 fi
 
 if [ "$BINARY" == "DEBUG" ];then
@@ -179,5 +179,5 @@ elif [ "$RUN_TYPE" == "NCU" ];then
 fi
 
 echo cmd=$cmd
-$cmd > /home/panlichen/work2/ofccl/log/ofccl.log
+$cmd #> /home/panlichen/work2/ofccl/log/ofccl.log
 
