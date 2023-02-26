@@ -19,15 +19,15 @@ os.environ['NUM_TRY_TASKQ_HEAD'] = "5"
 os.environ['DEV_TRY_ROUND'] = "10"
 
 # 设置超参数
-runNcclTest = False# 运行nccl测试,仅输出原始结果
-staticNccl = False # 运行统计，输出中间结果
+runNcclTest = True# 运行nccl测试,仅输出原始结果
+staticNccl = True # 运行统计，输出中间结果
 collectNcclResult  = True# 收集nccl测试结果，写入xls
 
 
-runOfcclTest = False# 运行ofccl测试
-staticOfccl = False # 运行统计，输出中间结果
+runOfcclTest = True# 运行ofccl测试
+staticOfccl = True # 运行统计，输出中间结果
 staticOfcclExtral = False# 对ofccl的额外输出进行统计
-collectOfcclResult = False# 收集ofccl测试结果，写入xls
+collectOfcclResult = True# 收集ofccl测试结果，写入xls
 
 buffer_sizes = ["64", "128", "256", "512", "1K", "2K", "4K", "8K", "16K", "32K", "64K", "128K", "256K", "512K", "1M", "2M", "4M", "8M", "16M", "32M", "64M", "128M", "256M", "512M", "1G"]
 
@@ -184,7 +184,7 @@ for MY_NUM_DEV in ncards:
             # bus
             op['bwSheet'].write(cnt*30,0,str(MY_NUM_DEV)+'卡',style)
 
-            with open(op['nccl_bw_path']) as f:
+            with open(op['nccl_bw_order_path']) as f:
                 content = f.read()
             bw = content.split()
 
@@ -208,7 +208,7 @@ for MY_NUM_DEV in ncards:
                 op['bwSheet'].write(2+i+cnt*30, 15, xlwt.Formula('SUM(M'+str(2+i+cnt*30+1)+',N'+str(2+i+cnt*30+1)+',O'+str(2+i+cnt*30+1)+')/3'),style) 
             
             # time  
-            with open(op['nccl_tm_path']) as f2:
+            with open(op['nccl_tm_order_path']) as f2:
                 content2 = f2.read()
             times = content2.split()
 
