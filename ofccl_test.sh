@@ -77,7 +77,7 @@ fi
 
 if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
-        if [ "$CARDNAME" = "a100" ]; then
+        if [ "$CARDNAME" = "ampere" ]; then
             export CUDA_VISIBLE_DEVICES=0,1,2,3
         else
             export CUDA_VISIBLE_DEVICES=0,1,4,5
