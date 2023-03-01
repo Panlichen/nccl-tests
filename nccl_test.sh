@@ -63,7 +63,7 @@ elif [ "$BINARY" == "MS" ];then
 fi
 
 export NSYS_FILE="nccl_"$MY_NUM_DEV"card_"$3
-export NCU_FILE="nccl"
+export NCU_FILE="nccl_ncu_"$MY_NUM_DEV"card_"$3
 
 if [ -z $RUN_TYPE ];then
     RUN_TYPE="PURE"
