@@ -1,5 +1,8 @@
+clear
+
 export MY_NUM_DEV=$1
 
+export NCCL_IGNORE_DISABLED_P2P=1
 export NCCL_PROTO=Simple
 export NCCL_ALGO=Ring
 # export NCCL_MAX_NCHANNELS=1
@@ -30,4 +33,5 @@ echo DEV_TRY_ROUND=$DEV_TRY_ROUND
 echo CHECK_REMAINING_SQE_INTERVAL=$CHECK_REMAINING_SQE_INTERVAL
 echo DEBUG_FILE=$DEBUG_FILE
 
-mpirun -np 2 /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf  -b 64K -e 64K -f 2 -t 1 -g 1 -n 5 -w 2 -c 0
+mpirun -np 2 /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf  -b 64K -e 64K -f 2 -t 1 -g 1 -n 1 -w 0 -c 0 -M 1
+# mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf  -b 64K -e 64K -f 2 -t 1 -g 1 -n 1 -w 0 -c 0

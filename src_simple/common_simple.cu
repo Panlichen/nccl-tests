@@ -1276,7 +1276,7 @@ testResult_t run() {
     if (p == proc)
       break;
     if (hostHashs[p] == hostHashs[proc])
-      localRank++;
+      localRank++; // 这么看，localRank代表的是进程的id。
   }
 #endif
   is_main_thread = (proc == 0) ? 1 : 0;
@@ -1378,7 +1378,6 @@ testResult_t run() {
         gpuArray[i] = i;
       // OFTEST_LOG1(TEST, "CommInitAll here");
       // use seprate comm
-      // TODO: we do not support MPI now.
       for (int miter = 0; miter < multi_iters; miter++) {
         NCCLCHECK(
           ncclCommInitAll(comms + miter * nThreads * nGpus, nThreads * nGpus, gpuArray));
@@ -1399,12 +1398,27 @@ testResult_t run() {
       // }
     } else {
       NCCLCHECK(ncclGroupStart());
-      for (int i = 0; i < nGpus * nThreads; i++) {
-        CUDACHECK(cudaSetDevice(localRank * nThreads * nGpus + i));
-        //  OFTEST_LOG1(TEST, "CommInitRank here");
-        NCCLCHECK(ncclCommInitRank(comms + i, nProcs * nThreads * nGpus, ncclId,
-                                   proc * nThreads * nGpus + i));
+      // for (int i = 0; i < nGpus * nThreads; i++) {
+      //   CUDACHECK(cudaSetDevice(localRank * nThreads * nGpus + i));
+      //   //  OFTEST_LOG1(TEST, "CommInitRank here");
+      //   NCCLCHECK(ncclCommInitRank(comms + i, nProcs * nThreads * nGpus, ncclId,
+      //                              proc * nThreads * nGpus + i));
+      // }
+
+      for (int miter = 0; miter < multi_iters; ++miter) {
+        for (int tid = 0; tid < nThreads; ++tid) {
+          for (int gid = 0; gid < nGpus; ++gid) {
+            int cudaDev = localRank * nThreads * nGpus + gid + (tid + miter * nThreads) * nGpus;
+            CUDACHECK(cudaSetDevice(cudaDev));
+            OFTEST_LOG(TEST, "CommInitRank for Rank<%d>", cudaDev);
+            NCCLCHECK(ncclCommInitRank(
+              adjusted_comms + gid + (miter + tid * multi_iters) * nGpus,
+              nProcs * nThreads * nGpus, ncclId, 
+              proc * nThreads * nGpus + gid + (tid + miter * nThreads) * nGpus));
+          }
+        }
       }
+
       NCCLCHECK(ncclGroupEnd());
     }
   }
@@ -1493,11 +1507,11 @@ testResult_t run() {
   MPI_Allreduce(MPI_IN_PLACE, &errors[0], 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 #endif
 
-  if (!parallel_init) {
-    for (int i = 0; i < nGpus * nThreads; ++i)
-      NCCLCHECK(ncclCommDestroy(comms[i]));
-    free(comms);
-  }
+  // if (!parallel_init) {
+  //   for (int i = 0; i < nGpus * nThreads; ++i)
+  //     NCCLCHECK(ncclCommDestroy(comms[i]));
+  //   free(comms);
+  // }
 
   // Free off CUDA allocated memory
   for (int i = 0; i < nGpus * nThreads; i++) {
