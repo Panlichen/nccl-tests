@@ -12,6 +12,7 @@
 #include <getopt.h>
 #include <libgen.h>
 #include <pthread.h>
+#include <unistd.h>
 
 int test_ncclVersion = 0; // init'd with ncclGetVersion()
 
@@ -1307,7 +1308,9 @@ testResult_t run() {
     int cudaDev = localRank * nThreads * nGpus + i;
     int rank = proc * nThreads * nGpus + i;
     cudaDeviceProp prop;
+    // OFTEST_LOG(TEST_MPI, "<%d-%lu> Rank<%d>, before cudaGetDeviceProperties", getpid(), pthread_self(), cudaDev);
     CUDACHECK(cudaGetDeviceProperties(&prop, cudaDev));
+    // OFTEST_LOG(TEST_MPI, "<%d-%lu> Rank<%d>, after cudaGetDeviceProperties", getpid(), pthread_self(), cudaDev);
     len +=
         snprintf(line + len, MAX_LINE - len,
                  "#   Rank %2d Pid %6d on %10s device %2d [0x%02x] %s\n", rank,
@@ -1410,7 +1413,7 @@ testResult_t run() {
           for (int gid = 0; gid < nGpus; ++gid) {
             int cudaDev = localRank * nThreads * nGpus + gid + (tid + miter * nThreads) * nGpus;
             CUDACHECK(cudaSetDevice(cudaDev));
-            OFTEST_LOG(TEST, "CommInitRank for Rank<%d>", cudaDev);
+            // OFTEST_LOG(TEST_MPI, "CommInitRank for Rank<%d>", cudaDev);
             NCCLCHECK(ncclCommInitRank(
               adjusted_comms + gid + (miter + tid * multi_iters) * nGpus,
               nProcs * nThreads * nGpus, ncclId, 

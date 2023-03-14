@@ -11,13 +11,11 @@ unset DEBUG_ENQ
 export DEBUG_NT=1
 unset DEBUG_NT
 
-cd /home/panlichen/work2/nccl-tests
-export LD_LIBRARY_PATH=/home/panlichen/work2/ofccl/build/lib
 export NCCL_PROTO=Simple
 export NCCL_ALGO=Ring
-# export NCCL_MAX_NCHANNELS=1
-# export NCCL_MIN_NCHANNELS=1
-# export NCCL_NTHREADS=64
+export NCCL_MAX_NCHANNELS=1
+export NCCL_MIN_NCHANNELS=1
+export NCCL_NTHREADS=64
 
 export CHECK=0
 export SHOW_ALL_PREPARED_COLL=0
@@ -86,9 +84,9 @@ if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 2 ]; then
         export CUDA_VISIBLE_DEVICES=4,5
     fi
-    export NITER=5
+    export NITER=1
     export NBYTES=$3
-    export WARMITER=2
+    export WARMITER=0
     export MITER=1
 elif [ "$BINARY" == "PERF" ];then
     if [ $MY_NUM_DEV = 4 ]; then

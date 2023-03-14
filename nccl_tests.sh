@@ -2,8 +2,7 @@ clear
 
 export MY_NUM_DEV=$1
 
-cd /home/panlichen/work2/nccl-tests
-export LD_LIBRARY_PATH=/home/panlichen/work2/ofccl/build/lib
+# export LD_LIBRARY_PATH=/home/panlichen/work2/ofccl/build/lib
 export NCCL_PROTO=Simple
 export NCCL_ALGO=Ring
 # export NCCL_MAX_NCHANNELS=1

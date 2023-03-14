@@ -14,9 +14,9 @@ export CHECK=0
 export SHOW_ALL_PREPARED_COLL=0
 
 export RECV_SUCCESS_FACTOR=5
-export RECV_SUCCESS_THRESHOLD=10000
-export TOLERANT_UNPROGRESSED_CNT=10000
-export BASE_CTX_SWITCH_THRESHOLD=8000
+export RECV_SUCCESS_THRESHOLD=100000000
+export TOLERANT_UNPROGRESSED_CNT=100000
+export BASE_CTX_SWITCH_THRESHOLD=80000
 export NUM_TRY_TASKQ_HEAD=6
 export DEV_TRY_ROUND=10
 export CHECK_REMAINING_SQE_INTERVAL=10000
@@ -33,5 +33,7 @@ echo DEV_TRY_ROUND=$DEV_TRY_ROUND
 echo CHECK_REMAINING_SQE_INTERVAL=$CHECK_REMAINING_SQE_INTERVAL
 echo DEBUG_FILE=$DEBUG_FILE
 
-mpirun -np 2 /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf  -b 64K -e 64K -f 2 -t 1 -g 1 -n 1 -w 0 -c 0 -M 1
-# mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf  -b 64K -e 64K -f 2 -t 1 -g 1 -n 1 -w 0 -c 0
+# mpirun -np 2 /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf -b $1 -e $1 -f 2 -t 1 -g 1 -n 1 -w 0 -c 0 -M 1
+mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf -b $1 -e $1 -f 2 -t 8 -g 1 -n 5 -w 2 -c 0 #> /home/panlichen/work2/ofccl/log/ofccl.log 2>&1
+
+mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/all_reduce_perf -b $1 -e $1 -f 2 -t 8 -g 1 -n 5 -w 2 -c 0 #> /home/panlichen/work2/ofccl/log/ofccl.log 2>&1
