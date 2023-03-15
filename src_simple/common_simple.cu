@@ -1510,11 +1510,12 @@ testResult_t run() {
   MPI_Allreduce(MPI_IN_PLACE, &errors[0], 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 #endif
 
-  // if (!parallel_init) {
-  //   for (int i = 0; i < nGpus * nThreads; ++i)
-  //     NCCLCHECK(ncclCommDestroy(comms[i]));
-  //   free(comms);
-  // }
+  if (!parallel_init) {
+    for (int i = 0; i < multi_iters * nGpus * nThreads; ++i) 
+      NCCLCHECK(ncclCommDestroy(adjusted_comms[i]));
+    free(comms);
+    free(adjusted_comms);
+  }
 
   // Free off CUDA allocated memory
   for (int i = 0; i < nGpus * nThreads; i++) {
@@ -1540,9 +1541,11 @@ testResult_t run() {
 #ifdef MPI_SUPPORT
   MPI_Finalize();
 #endif
+  // OFTEST_LOG(TEST_MPI, "<%d-%lu>, after MPI_Finalize", getpid(), pthread_self());
 
   // 'cuda-memcheck --leak-check full' requires this
   cudaDeviceReset();
+  // OFTEST_LOG(TEST_MPI, "<%d-%lu>, after cudaDeviceReset", getpid(), pthread_self());
 
   if (errors[0] || bw[0] < check_avg_bw * (0.9))
     exit(EXIT_FAILURE);
