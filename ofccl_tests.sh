@@ -13,9 +13,9 @@ unset DEBUG_NT
 
 export NCCL_PROTO=Simple
 export NCCL_ALGO=Ring
-export NCCL_MAX_NCHANNELS=1
-export NCCL_MIN_NCHANNELS=1
-export NCCL_NTHREADS=64
+# export NCCL_MAX_NCHANNELS=1
+# export NCCL_MIN_NCHANNELS=1
+# export NCCL_NTHREADS=64
 
 export CHECK=0
 export SHOW_ALL_PREPARED_COLL=0
@@ -177,5 +177,5 @@ elif [ "$RUN_TYPE" == "NCU" ];then
 fi
 
 echo cmd=$cmd
-$cmd #> /home/panlichen/work2/ofccl/log/ofccl.log
+$cmd > /home/panlichen/work2/ofccl/ofccl.log
 
