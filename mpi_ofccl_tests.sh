@@ -37,13 +37,13 @@ echo CHECK_REMAINING_SQE_INTERVAL=$CHECK_REMAINING_SQE_INTERVAL
 echo DEBUG_FILE=$DEBUG_FILE
 
 
-mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/all_reduce_perf -b $2 -e $2 -f 2 -t $1 -g 1 -n 5 -w 3 -c 0 > /home/panlichen/work2/ofccl/nccl.log 2>&1
+mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/all_reduce_perf -b $2 -e $2 -f 2 -t $1 -g 1 -n 5 -w 2 -c 0 > /home/panlichen/work2/ofccl/nccl.log 2>&1
 
 # export NCCL_DEBUG=INFO
 
 # export NCCL_IB_DISABLE=1
 
-mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf -b $2 -e $2 -f 2 -t $1 -g 1 -n 5 -w 3 -c 0 > /home/panlichen/work2/ofccl/ofccl.log 2>&1
+mpirun -np 2 -f machinefile /home/panlichen/work2/mpi/nccl-tests/build/ofccl_all_reduce_perf -b $2 -e $2 -f 2 -t $1 -g 1 -n 5 -w 2 -c 0 > /home/panlichen/work2/ofccl/ofccl.log 2>&1
 
 
 # export NCCL_P2P_DISABLE=1
