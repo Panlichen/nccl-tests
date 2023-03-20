@@ -12,6 +12,7 @@
 #include <getopt.h>
 #include <libgen.h>
 #include <pthread.h>
+#include <unistd.h>
 
 int test_ncclVersion = 0; // init'd with ncclGetVersion()
 
@@ -1276,7 +1277,7 @@ testResult_t run() {
     if (p == proc)
       break;
     if (hostHashs[p] == hostHashs[proc])
-      localRank++;
+      localRank++; // 这么看，localRank代表的是进程的id。
   }
 #endif
   is_main_thread = (proc == 0) ? 1 : 0;
@@ -1307,7 +1308,9 @@ testResult_t run() {
     int cudaDev = localRank * nThreads * nGpus + i;
     int rank = proc * nThreads * nGpus + i;
     cudaDeviceProp prop;
+    // OFTEST_LOG(TEST_MPI, "<%d-%lu> Rank<%d>, before cudaGetDeviceProperties", getpid(), pthread_self(), cudaDev);
     CUDACHECK(cudaGetDeviceProperties(&prop, cudaDev));
+    // OFTEST_LOG(TEST_MPI, "<%d-%lu> Rank<%d>, after cudaGetDeviceProperties", getpid(), pthread_self(), cudaDev);
     len +=
         snprintf(line + len, MAX_LINE - len,
                  "#   Rank %2d Pid %6d on %10s device %2d [0x%02x] %s\n", rank,
@@ -1378,7 +1381,6 @@ testResult_t run() {
         gpuArray[i] = i;
       // OFTEST_LOG1(TEST, "CommInitAll here");
       // use seprate comm
-      // TODO: we do not support MPI now.
       for (int miter = 0; miter < multi_iters; miter++) {
         NCCLCHECK(
           ncclCommInitAll(comms + miter * nThreads * nGpus, nThreads * nGpus, gpuArray));
@@ -1399,12 +1401,27 @@ testResult_t run() {
       // }
     } else {
       NCCLCHECK(ncclGroupStart());
-      for (int i = 0; i < nGpus * nThreads; i++) {
-        CUDACHECK(cudaSetDevice(localRank * nThreads * nGpus + i));
-        //  OFTEST_LOG1(TEST, "CommInitRank here");
-        NCCLCHECK(ncclCommInitRank(comms + i, nProcs * nThreads * nGpus, ncclId,
-                                   proc * nThreads * nGpus + i));
+      // for (int i = 0; i < nGpus * nThreads; i++) {
+      //   CUDACHECK(cudaSetDevice(localRank * nThreads * nGpus + i));
+      //   //  OFTEST_LOG1(TEST, "CommInitRank here");
+      //   NCCLCHECK(ncclCommInitRank(comms + i, nProcs * nThreads * nGpus, ncclId,
+      //                              proc * nThreads * nGpus + i));
+      // }
+
+      for (int miter = 0; miter < multi_iters; ++miter) {
+        for (int tid = 0; tid < nThreads; ++tid) {
+          for (int gid = 0; gid < nGpus; ++gid) {
+            int cudaDev = localRank * nThreads * nGpus + gid + (tid + miter * nThreads) * nGpus;
+            CUDACHECK(cudaSetDevice(cudaDev));
+            // OFTEST_LOG(TEST_MPI, "CommInitRank for Rank<%d>", cudaDev);
+            NCCLCHECK(ncclCommInitRank(
+              adjusted_comms + gid + (miter + tid * multi_iters) * nGpus,
+              nProcs * nThreads * nGpus, ncclId, 
+              proc * nThreads * nGpus + gid + (tid + miter * nThreads) * nGpus));
+          }
+        }
       }
+
       NCCLCHECK(ncclGroupEnd());
     }
   }
@@ -1494,9 +1511,10 @@ testResult_t run() {
 #endif
 
   if (!parallel_init) {
-    for (int i = 0; i < nGpus * nThreads; ++i)
-      NCCLCHECK(ncclCommDestroy(comms[i]));
+    for (int i = 0; i < multi_iters * nGpus * nThreads; ++i) 
+      NCCLCHECK(ncclCommDestroy(adjusted_comms[i]));
     free(comms);
+    free(adjusted_comms);
   }
 
   // Free off CUDA allocated memory
@@ -1523,9 +1541,11 @@ testResult_t run() {
 #ifdef MPI_SUPPORT
   MPI_Finalize();
 #endif
+  // OFTEST_LOG(TEST_MPI, "<%d-%lu>, after MPI_Finalize", getpid(), pthread_self());
 
   // 'cuda-memcheck --leak-check full' requires this
   cudaDeviceReset();
+  // OFTEST_LOG(TEST_MPI, "<%d-%lu>, after cudaDeviceReset", getpid(), pthread_self());
 
   if (errors[0] || bw[0] < check_avg_bw * (0.9))
     exit(EXIT_FAILURE);
