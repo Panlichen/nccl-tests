@@ -1412,6 +1412,7 @@ testResult_t run() {
         for (int tid = 0; tid < nThreads; ++tid) {
           for (int gid = 0; gid < nGpus; ++gid) {
             int cudaDev = localRank * nThreads * nGpus + gid + (tid + miter * nThreads) * nGpus;
+            // TODO: multi_iters>1的时候，这里的cudaDev不对，报错'invalid device ordinal'
             CUDACHECK(cudaSetDevice(cudaDev));
             // OFTEST_LOG(TEST_MPI, "CommInitRank for Rank<%d>", cudaDev);
             NCCLCHECK(ncclCommInitRank(

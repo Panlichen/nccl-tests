@@ -56,15 +56,16 @@ echo DEV_TRY_ROUND=$DEV_TRY_ROUND
 echo CHECK_REMAINING_SQE_INTERVAL=$CHECK_REMAINING_SQE_INTERVAL
 echo DEBUG_FILE=$DEBUG_FILE
 
+export MULTI=1
 
-# mpirun -np 2 -f machinefile $nccl_target -b $NBYTES -e $NBYTES -f 2 -t $1 -g 1 -n 5 -w 2 -c 0 > /home/panlichen/work2/ofccl/nccl.log 2>&1
+mpirun -np 2 -f machinefile $nccl_target -b $NBYTES -e $NBYTES -f 2 -t $1 -g 1 -n 5 -w 2 -c 0 -m $MULTI > /home/panlichen/work2/ofccl/nccl.log 2>&1
 
 # export NCCL_DEBUG=INFO
 
 # export NCCL_IB_DISABLE=1
 
 echo $ofccl_target
-mpirun -np 2 -f machinefile $ofccl_target -b $NBYTES -e $NBYTES -f 2 -t $1 -g 1 -n 5 -w 2 -c 0 > /home/panlichen/work2/ofccl/ofccl.log 2>&1
+mpirun -np 2 -f machinefile $ofccl_target -b $NBYTES -e $NBYTES -f 2 -t $1 -g 1 -n 5 -w 2 -c 0 -M $MULTI > /home/panlichen/work2/ofccl/ofccl.log 2>&1
 
 
 # export NCCL_P2P_DISABLE=1
