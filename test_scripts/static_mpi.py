@@ -69,11 +69,19 @@ def extract_from_file(dir, file):
             if file == "nccl":
                 info[op][str(byte)]["time"] = sorted(info[op][str(byte)]["time"], reverse=True)
                 info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["algbw"],reverse=False)
-                info[op][str(byte)]["busbw"] = sorted(info[op][str(byte)]["busbw"],reverse=False)
+                info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["busbw"],reverse=False)
+                
             else:
                 info[op][str(byte)]["time"] = sorted(info[op][str(byte)]["time"],reverse=False)
                 info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["algbw"],reverse=True)
                 info[op][str(byte)]["busbw"] = sorted(info[op][str(byte)]["busbw"],reverse=True)
+
+            for type in ["time", "algbw","algbw"]:
+                    i = 0
+                    while (info[op][str(byte)][type][i] > info[op][str(byte)][type][i+1]*1.5 or info[op][str(byte)][type][i]*1.5 < info[op][str(byte)][type][i+1])and i <3:
+                        i = i+1
+                    info[op][str(byte)][type]=info[op][str(byte)][type][i:i+3]
+                    
             byte = byte*2
             
     ##pprint(info)
