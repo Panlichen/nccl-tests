@@ -69,21 +69,23 @@ def extract_from_file(dir, file):
             if file == "nccl":
                 info[op][str(byte)]["time"] = sorted(info[op][str(byte)]["time"], reverse=True)
                 info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["algbw"],reverse=False)
-                info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["busbw"],reverse=False)
+                info[op][str(byte)]["busbw"] = sorted(info[op][str(byte)]["busbw"],reverse=False)
                 
             else:
                 info[op][str(byte)]["time"] = sorted(info[op][str(byte)]["time"],reverse=False)
                 info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["algbw"],reverse=True)
                 info[op][str(byte)]["busbw"] = sorted(info[op][str(byte)]["busbw"],reverse=True)
 
-            for type in ["time", "algbw","algbw"]:
+            for type in ["time", "algbw","busbw"]:
                     i = 0
                     while (info[op][str(byte)][type][i] > info[op][str(byte)][type][i+1]*1.5 or info[op][str(byte)][type][i]*1.5 < info[op][str(byte)][type][i+1])and i <3:
                         i = i+1
                     info[op][str(byte)][type]=info[op][str(byte)][type][i:i+3]
-                    
+
             byte = byte*2
-            
+    
+    with open("./dict.txt", "w+") as f:
+        pprint(info,f)
     ##pprint(info)
     return info
 
@@ -177,9 +179,9 @@ def write_excel(info, wb):
 
 if __name__ == "__main__":
     info = {}
-    info["nccl"] = extract_from_file("./mpi_res_4hosts","nccl")
-    info["occl"] = extract_from_file("./mpi_res_4hosts","occl")
+    info["nccl"] = extract_from_file("./mpi_res","nccl")
+    info["occl"] = extract_from_file("./mpi_res","occl")
     #info["nccl"] = extract_occl()
     wb = openpyxl.Workbook()
     write_excel(info, wb)
-    wb.save('4hosts_32cards.xlsx')
+    wb.save('2hosts_16cards.xlsx')
