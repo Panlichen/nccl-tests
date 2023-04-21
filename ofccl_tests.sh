@@ -8,8 +8,10 @@ export DEBUG_ENQ=1
 unset DEBUG_CC
 unset DEBUG_ENQ
 
-export DEBUG_NT=1
+export DEBUG_NT=1 # for debug nccl-tests
 unset DEBUG_NT
+
+# export NCCL_P2P_DISABLE=1
 
 export NCCL_PROTO=Simple
 export NCCL_ALGO=Ring
@@ -21,9 +23,9 @@ export CHECK=0
 export SHOW_ALL_PREPARED_COLL=0
 
 export RECV_SUCCESS_FACTOR=5
-export RECV_SUCCESS_THRESHOLD=10000
+export RECV_SUCCESS_THRESHOLD=100000000
 export TOLERANT_UNPROGRESSED_CNT=10000
-export BASE_CTX_SWITCH_THRESHOLD=8000
+export BASE_CTX_SWITCH_THRESHOLD=200000
 export NUM_TRY_TASKQ_HEAD=6
 export DEV_TRY_ROUND=10
 export CHECK_REMAINING_SQE_INTERVAL=10000
@@ -76,7 +78,8 @@ fi
 if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
         if [ "$CARDNAME" = "ampere" ]; then
-            export CUDA_VISIBLE_DEVICES=0,1,2,3
+            # export CUDA_VISIBLE_DEVICES=0,1,2,3
+            export CUDA_VISIBLE_DEVICES=4,5,6,7
         else
             export CUDA_VISIBLE_DEVICES=0,1,4,5
         fi
@@ -84,9 +87,9 @@ if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 2 ]; then
         export CUDA_VISIBLE_DEVICES=4,5
     fi
-    export NITER=1
+    export NITER=5
     export NBYTES=$3
-    export WARMITER=0
+    export WARMITER=2
     export MITER=1
 elif [ "$BINARY" == "PERF" ];then
     if [ $MY_NUM_DEV = 4 ]; then
@@ -130,45 +133,12 @@ if [ -z $RUN_TYPE ];then
     # RUN_TYPE="NCU"
 fi
 
-# typedef enum { ncclInt8       = 0, ncclChar       = 0,
-#                ncclUint8      = 1,
-#                ncclInt32      = 2, ncclInt        = 2,
-#                ncclUint32     = 3,
-#                ncclInt64      = 4,
-#                ncclUint64     = 5,
-#                ncclFloat16    = 6, ncclHalf       = 6,
-#                ncclFloat32    = 7, ncclFloat      = 7,
-#                ncclFloat64    = 8, ncclDouble     = 8,
-# #if defined(__CUDA_BF16_TYPES_EXIST__)
-#                ncclBfloat16   = 9,
-#                ncclNumTypes   = 10
-# #else
-#                ncclNumTypes   = 9
-# #endif
-# } ncclDataType_t;
-
-# 用这个：
-# const char *test_typenames[ncclNumTypes] = {"int8",
-#                                             "uint8",
-#                                             "int32",
-#                                             "uint32",
-#                                             "int64",
-#                                             "uint64",
-#                                             "half",
-#                                             "float",
-#                                             "double"
-# #if defined(__CUDA_BF16_TYPES_EXIST__) &&                                      \
-#     NCCL_VERSION_CODE >= NCCL_VERSION(2, 10, 0)
-#                                             ,
-#                                             "bfloat16"
-# #endif
-# };
-
 if [ "$RUN_TYPE" == "PURE" ];then
     cmd="$target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER" #  -d half
 elif [ "$RUN_TYPE" == "GDB" ];then
     cmd="cuda-gdb $target"
     # set args -b 64 -e 64 -f 2 -t 2 -g 1 -n 1 -w 0 -c 0
+    # set args -b 512 -e 512 -f 2 -t 4 -g 1 -n 1 -w 0 -c 0
 elif [ "$RUN_TYPE" == "NSYS" ];then
     cmd="nsys profile -f true --trace=cuda,cudnn,cublas,osrt,nvtx -o /home/panlichen/work2/ofccl/log/nsys/$NSYS_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
 elif [ "$RUN_TYPE" == "NCU" ];then
@@ -177,5 +147,5 @@ elif [ "$RUN_TYPE" == "NCU" ];then
 fi
 
 echo cmd=$cmd
-$cmd > /home/panlichen/work2/ofccl/ofccl.log
+$cmd #> /home/panlichen/work2/ofccl/ofccl.log
 
