@@ -36,9 +36,9 @@ if [ "$BINARY" == "DEBUG" ];then
     if [ $MY_NUM_DEV = 4 ]; then
         export CUDA_VISIBLE_DEVICES=0,1,2,3
     fi
-    export NITER=1
+    export NITER=5
     export NBYTES=$3
-    export WARMITER=0
+    export WARMITER=2
     export MITER=1
     export CHECK=0
 elif [ "$BINARY" == "PERF" ];then
@@ -84,5 +84,5 @@ elif [ "$RUN_TYPE" == "NCU" ];then
 fi
 
 echo cmd=$cmd
-$cmd > /home/panlichen/work2/ofccl/nccl.log
+$cmd #> /home/panlichen/work2/ofccl/nccl.log
 

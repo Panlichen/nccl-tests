@@ -873,6 +873,10 @@ testResult_t BenchTime(struct threadArgs *args, ncclDataType_t type, ncclRedOp_t
     #endif
   }
 
+  // int cudaDev;
+  // cudaGetDevice(&cudaDev);
+  // OFTEST_LOG(TEST_P2P, "Rank<%d>, done %d iters", cudaDev, iters);
+
   #ifndef NEW_TIMER
     auto delta = std::chrono::high_resolution_clock::now() - start;
     double deltaSec =
@@ -901,12 +905,14 @@ testResult_t BenchTime(struct threadArgs *args, ncclDataType_t type, ncclRedOp_t
   #endif
 
   Allreduce(args, &deltaSec, average);
+  // OFTEST_LOG(TEST_P2P, "Rank<%d>, done Allreduce", cudaDev);
 
   double algBw, busBw;
   args->collTest->getBw(count, wordSize(type), deltaSec, &algBw, &busBw,
                         args->nProcs * args->nThreads * args->nGpus);
 
   Barrier(args);
+  // OFTEST_LOG(TEST_P2P, "Rank<%d>, done Barrier & before ofcclDestroy", cudaDev);
 
   ofcclDestroy(rankCtx);
 
