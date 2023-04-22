@@ -41,7 +41,7 @@ def setEnv():
 
 def runTest(buffer_sizes,ITER,machines,i):
 
-    RES_DIR = "./a100_8card" 
+    RES_DIR = "./a100_8card_2G4G" 
     # if os.path.exists(RES_DIR ):
     #     os.system("rm -r " + RES_DIR )
     # os.mkdir(RES_DIR)
@@ -78,7 +78,8 @@ def main():
     setEnv() 
     
     #buffer_sizes = ["512", "1K", "2K", "4K", "8K", "16K", "32K", "64K",  "128K", "256K", "512K", "1M", "2M"]
-    buffer_sizes = ["512", "1K", "2K", "4K", "8K", "16K", "32K", "64K",  "128K", "256K", "512K", "1M", "2M","4M","8M","16M","32M","64M","128M","256M","512M","1G"]
+    # buffer_sizes = ["512", "1K", "2K", "4K", "8K", "16K", "32K", "64K",  "128K", "256K", "512K", "1M", "2M","4M","8M","16M","32M","64M","128M","256M","512M","1G"]
+    buffer_sizes = ["2G", "4G"]
     for i in [0,1,2,3,4]:
         runTest(buffer_sizes,[0,1,2,3,4,5],4,i)
     

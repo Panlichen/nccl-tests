@@ -115,21 +115,21 @@
 # nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
 #
 # Using devices
-#   Rank  0 Pid 1956280 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
-#   Rank  1 Pid 1956280 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
-#   Rank  2 Pid 1956280 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
-#   Rank  3 Pid 1956280 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
-#   Rank  4 Pid 1956280 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
-#   Rank  5 Pid 1956280 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
-#   Rank  6 Pid 1956280 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
-#   Rank  7 Pid 1956280 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#   Rank  0 Pid 1918257 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1918257 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1918257 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1918257 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1918257 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1918257 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1918257 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1918257 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
 #
 #                                                       out-of-place                       in-place          
 #       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
 #        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
-       32768          8192     float     sum    223.3    0.15    0.26    N/A
+       32768          8192     float     sum    171.9    0.19    0.33    N/A
 # Out of bounds values : 0 OK
-# Avg bus bandwidth    : 0.256852 
+# Avg bus bandwidth    : 0.333513 
 #
 # nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
 #
