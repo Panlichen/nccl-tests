@@ -1,0 +1,744 @@
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140598620729344> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2028584 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2028584 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2028584 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2028584 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2028584 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2028584 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2028584 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2028584 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512           128     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0[enqueue_ofccl_dev.cu> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8:1097[enqueue_ofccl_dev.cu] <daemonKernel:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> OFCCL_FINAL_QUIT Rank<4> Thrd<0> Blk<0[enqueue_ofccl_dev.cu> Thrd<0:1097> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    32.51    0.02    0.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0157498 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140166501294080> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2028793 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2028793 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2028793 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2028793 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2028793 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2028793 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2028793 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2028793 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           256     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel:1097:1097[enqueue_ofccl_dev.cu] <daemonKernel] <daemonKernel:1097] <daemonKernel> Thrd<0> OFCCL_FINAL_QUIT Rank<6> Blk<0> OFCCL_FINAL_QUIT Rank<7[enqueue_ofccl_dev.cu> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> Thrd<0> totalCtxSaveCnt=0> totalCtxSaveCnt=0> Blk<0:1097, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> OFCCL_FINAL_QUIT Rank<5] <daemonKernel> totalCtxSaveCnt=0:1097> Blk<0> Thrd<0> OFCCL_FINAL_QUIT Rank<1> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalUnprogressedQuitCnt=0> Blk<0> Thrd<0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0] <daemonKernel, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0
+> OFCCL_FINAL_QUIT Rank<4[enqueue_ofccl_dev.cu:1097] <daemonKernel> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> Blk<0, totalSwitchCntBeforeRecvSuccess=0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    33.62    0.03    0.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0304585 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139708331982848> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2029126 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2029126 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2029126 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2029126 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2029126 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2029126 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2029126 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2029126 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           512     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097> totalCtxSaveCnt=0] <daemonKernel:1097, totalCtxLoadCnt=8> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalUnprogressedQuitCnt=0] <daemonKernel
+> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    34.21    0.06    0.06    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0598634 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140614647877632> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2029344 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2029344 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2029344 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2029344 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2029344 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2029344 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2029344 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2029344 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096          1024     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    34.44    0.12    0.12    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.11892 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140503718932480> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2029555 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2029555 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2029555 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2029555 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2029555 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2029555 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2029555 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2029555 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          2048     float     sum       0[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0:1097[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu] <daemonKernel> totalCtxSaveCnt=0:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<4, totalCtxLoadCnt=8> Blk<0, totalSwitchCntAfterRecvSuccess=0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8:1097> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+    34.69    0.24    0.24    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.236174 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140450007912448> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2029774 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2029774 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2029774 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2029774 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2029774 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2029774 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2029774 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2029774 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          4096     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0> totalCtxSaveCnt=0] <daemonKernel:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> OFCCL_FINAL_QUIT Rank<5[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8:1097, totalCtxLoadCnt=8> Blk<0] <daemonKernel, totalSwitchCntAfterRecvSuccess=0:1097, totalSwitchCntAfterRecvSuccess=0> Blk<0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097> Thrd<0] <daemonKernel> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    36.55    0.45    0.45    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.448297 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140603919978496> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2029991 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2029991 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2029991 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2029991 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2029991 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2029991 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2029991 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2029991 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          8192     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu:1097] <daemonKernel[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel, totalUnprogressedQuitCnt=0> OFCCL_FINAL_QUIT Rank<6
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0:1097] <daemonKernel, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+    39.98    0.82    0.82    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.819547 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140017581260800> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2030203 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2030203 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2030203 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2030203 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2030203 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2030203 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2030203 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2030203 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536         16384     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu> totalCtxSaveCnt=0:1097:1097] <daemonKernel, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<2> OFCCL_FINAL_QUIT Rank<7:1097, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Blk<0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0] <daemonKernel, totalCtxLoadCnt=8> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalUnprogressedQuitCnt=0
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    43.48    1.51    1.51    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.5074 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140100156846080> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2030422 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2030422 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2030422 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2030422 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2030422 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2030422 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2030422 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2030422 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         32768     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu:1097, totalUnprogressedQuitCnt=0] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu, totalSwitchCntAfterRecvSuccess=0[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<7[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8] <daemonKernel, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<0, totalSwitchCntBeforeRecvSuccess=0> Blk<0, totalUnprogressedQuitCnt=0> Thrd<0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8> totalCtxSaveCnt=0, totalSwitchCntAfterRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    54.00    2.43    2.43    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.42727 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139750239113216> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2030683 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2030683 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2030683 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2030683 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2030683 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2030683 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2030683 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2030683 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         65536     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7] <daemonKernel[enqueue_ofccl_dev.cu> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0:1097> Blk<0> Thrd<0> totalCtxSaveCnt=0:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel[enqueue_ofccl_dev.cu] <daemonKernel, totalCtxLoadCnt=8> OFCCL_FINAL_QUIT Rank<4> OFCCL_FINAL_QUIT Rank<5> Blk<1> Blk<0> Thrd<0:1097> totalCtxSaveCnt=0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu, totalSwitchCntAfterRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0] <daemonKernel> totalCtxSaveCnt=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0
+[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalUnprogressedQuitCnt=0, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<5
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097, totalSwitchCntAfterRecvSuccess=0] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0, totalSwitchCntBeforeRecvSuccess=0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1] <daemonKernel> Thrd<0> OFCCL_FINAL_QUIT Rank<2> Blk<0> totalCtxSaveCnt=0> Thrd<0, totalCtxLoadCnt=8> totalCtxSaveCnt=0, totalSwitchCntAfterRecvSuccess=0> Thrd<0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+    73.66    3.56    3.56    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.55901 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140703921643520> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2030969 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2030969 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2030969 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2030969 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2030969 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2030969 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2030969 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2030969 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288        131072     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0[enqueue_ofccl_dev.cu:1097
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5] <daemonKernel[enqueue_ofccl_dev.cu> Blk<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0:1097[enqueue_ofccl_dev.cu> Thrd<0] <daemonKernel> totalCtxSaveCnt=0> OFCCL_FINAL_QUIT Rank<7> Blk<0> totalCtxSaveCnt=0> OFCCL_FINAL_QUIT Rank<2] <daemonKernel> Blk<0> Thrd<0, totalCtxLoadCnt=8> Thrd<0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0
+> OFCCL_FINAL_QUIT Rank<6[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> OFCCL_FINAL_QUIT Rank<5, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> Thrd<0:1097> totalCtxSaveCnt=0] <daemonKernel, totalCtxLoadCnt=8, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    110.4    4.75    4.75    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.74955 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139989913612288> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2031189 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2031189 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2031189 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2031189 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2031189 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2031189 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2031189 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2031189 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        262144     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8] <daemonKernel[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> OFCCL_FINAL_QUIT Rank<1[enqueue_ofccl_dev.cu:1097] <daemonKernel> Blk<1, totalSwitchCntAfterRecvSuccess=0:1097> Thrd<0> Blk<0[enqueue_ofccl_dev.cu> Thrd<0> totalCtxSaveCnt=0> totalCtxSaveCnt=0, totalSwitchCntBeforeRecvSuccess=0] <daemonKernel, totalUnprogressedQuitCnt=0:1097> OFCCL_FINAL_QUIT Rank<0] <daemonKernel
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<7> Blk<0, totalSwitchCntBeforeRecvSuccess=0> Thrd<0> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    180.2    5.82    5.82    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 5.81998 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140277086359552> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2031410 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2031410 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2031410 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2031410 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2031410 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2031410 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2031410 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2031410 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        524288     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel[enqueue_ofccl_dev.cu> OFCCL_FINAL_QUIT Rank<1] <daemonKernel:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu> Blk<0[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0> OFCCL_FINAL_QUIT Rank<0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> Blk<1> Blk<0> Thrd<0> totalCtxSaveCnt=0> Thrd<0, totalSwitchCntBeforeRecvSuccess=0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu, totalUnprogressedQuitCnt=0:1097> OFCCL_FINAL_QUIT Rank<6:1097, totalCtxLoadCnt=8, totalCtxLoadCnt=8] <daemonKernel, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<2] <daemonKernel, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8> OFCCL_FINAL_QUIT Rank<4, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1, totalSwitchCntAfterRecvSuccess=0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    277.9    7.55    7.55    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 7.54766 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139868053966848> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2031620 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2031620 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2031620 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2031620 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2031620 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2031620 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2031620 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2031620 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304       1048576     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel[enqueue_ofccl_dev.cu:1097:1097:1097] <daemonKernel] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> OFCCL_FINAL_QUIT Rank<0] <daemonKernel:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097> OFCCL_FINAL_QUIT Rank<5] <daemonKernel> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<0> Thrd<0> totalCtxSaveCnt=0> OFCCL_FINAL_QUIT Rank<7, totalCtxLoadCnt=8> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0] <daemonKernel> Blk<0> OFCCL_FINAL_QUIT Rank<6> Thrd<0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<1> Thrd<0> totalCtxSaveCnt=0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalUnprogressedQuitCnt=0
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    463.8    9.04    9.04    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 9.04247 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140548921753600> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2031836 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2031836 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2031836 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2031836 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2031836 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2031836 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2031836 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2031836 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       2097152     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu] <daemonKernel[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntAfterRecvSuccess=0
+[enqueue_ofccl_dev.cu:1097> OFCCL_FINAL_QUIT Rank<6] <daemonKernel> Blk<1:1097> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> Thrd<0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0:1097, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0] <daemonKernel> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0> OFCCL_FINAL_QUIT Rank<7, totalCtxLoadCnt=8, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0] <daemonKernel
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+    858.8    9.77    9.77    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 9.76754 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139882557710336> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2032054 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2032054 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2032054 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2032054 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2032054 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2032054 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2032054 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2032054 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       4194304     float     sum       0[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8:1097, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> OFCCL_FINAL_QUIT Rank<4> Blk<0> Blk<0> Thrd<0> Thrd<0> totalCtxSaveCnt=0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0] <daemonKernel[enqueue_ofccl_dev.cu, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<0, totalSwitchCntBeforeRecvSuccess=0> Blk<0, totalUnprogressedQuitCnt=0:1097[enqueue_ofccl_dev.cu, totalCtxLoadCnt=8] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0, totalSwitchCntAfterRecvSuccess=0:1097> Thrd<0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0[enqueue_ofccl_dev.cu
+[enqueue_ofccl_dev.cu, totalSwitchCntBeforeRecvSuccess=0:1097, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel] <daemonKernel:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8> Thrd<0, totalSwitchCntAfterRecvSuccess=0> totalCtxSaveCnt=0, totalSwitchCntBeforeRecvSuccess=0> OFCCL_FINAL_QUIT Rank<6, totalCtxLoadCnt=8, totalUnprogressedQuitCnt=0, totalSwitchCntAfterRecvSuccess=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalUnprogressedQuitCnt=0> Blk<1
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<3, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Blk<1
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> Thrd<0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+   1638.9   10.24   10.24    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.2371 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140023971876864> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2032265 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2032265 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2032265 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2032265 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2032265 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2032265 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2032265 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2032265 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       8388608     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097:1097] <daemonKernel] <daemonKernel:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> OFCCL_FINAL_QUIT Rank<0> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0:1097> Blk<0[enqueue_ofccl_dev.cu:1097] <daemonKernel] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalSwitchCntBeforeRecvSuccess=0, totalCtxLoadCnt=8, totalUnprogressedQuitCnt=0] <daemonKernel, totalSwitchCntAfterRecvSuccess=0> OFCCL_FINAL_QUIT Rank<6, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Blk<1> Blk<1> Thrd<0> totalCtxSaveCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Thrd<0> Blk<0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> Thrd<0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0> totalCtxSaveCnt=0> Thrd<0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0
+, totalCtxLoadCnt=8, totalCtxLoadCnt=8> totalCtxSaveCnt=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalCtxLoadCnt=8
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+   3175.5   10.57   10.57    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.5668 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140459649851392> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2032592 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2032592 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2032592 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2032592 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2032592 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2032592 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2032592 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2032592 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864      16777216     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0[enqueue_ofccl_dev.cu
+[enqueue_ofccl_dev.cu
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu, totalUnprogressedQuitCnt=0
+:1097, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0:1097
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+   6438.6   10.42   10.42    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.4229 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139829203750912> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2032816 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2032816 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2032816 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2032816 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2032816 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2032816 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2032816 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2032816 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      33554432     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> Blk<1, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalSwitchCntBeforeRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalUnprogressedQuitCnt=0[enqueue_ofccl_dev.cu
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> Thrd<0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0, totalCtxLoadCnt=8
+, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    12688   10.58   10.58    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.5785 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140188046184448> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2033026 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2033026 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2033026 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2033026 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2033026 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2033026 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2033026 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2033026 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      67108864     float     sum       0[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0:1097:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Blk<1
+:1097] <daemonKernel> Thrd<0> totalCtxSaveCnt=0> OFCCL_FINAL_QUIT Rank<3, totalCtxLoadCnt=8> Blk<0] <daemonKernel> Thrd<0> OFCCL_FINAL_QUIT Rank<2> totalCtxSaveCnt=0> Blk<1, totalCtxLoadCnt=8> Thrd<0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0> totalCtxSaveCnt=0, totalUnprogressedQuitCnt=0
+, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+, totalUnprogressedQuitCnt=0
+> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    25906   10.36   10.36    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.3621 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140225844613120> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2033241 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2033241 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2033241 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2033241 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2033241 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2033241 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2033241 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2033241 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912     134217728     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> totalCtxSaveCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0
+[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0:1097] <daemonKernel, totalUnprogressedQuitCnt=0> OFCCL_FINAL_QUIT Rank<5
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0> Blk<0
+:1097> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0] <daemonKernel, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    43734   12.28   12.28    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 12.2758 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140507074723840> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 2033442 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 2033442 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 2033442 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 2033442 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 2033442 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 2033442 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 2033442 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 2033442 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     268435456     float     sum       0[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<3> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalSwitchCntAfterRecvSuccess=0, totalCtxLoadCnt=8, totalSwitchCntBeforeRecvSuccess=0, totalSwitchCntAfterRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<0> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<2> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0[enqueue_ofccl_dev.cu, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<4> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0, totalSwitchCntBeforeRecvSuccess=0
+:1097[enqueue_ofccl_dev.cu[enqueue_ofccl_dev.cu:1097, totalUnprogressedQuitCnt=0] <daemonKernel
+] <daemonKernel:1097
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<1> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<6> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<5> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<5> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+> OFCCL_FINAL_QUIT Rank<7> Blk<1> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+[enqueue_ofccl_dev.cu:1097] <daemonKernel> OFCCL_FINAL_QUIT Rank<7> Blk<0> Thrd<0> totalCtxSaveCnt=0, totalCtxLoadCnt=8, totalSwitchCntAfterRecvSuccess=0, totalSwitchCntBeforeRecvSuccess=0, totalUnprogressedQuitCnt=0
+    80561   13.33   13.33    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 13.3282 
+#

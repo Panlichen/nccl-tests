@@ -1,0 +1,418 @@
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1985074 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1985074 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1985074 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1985074 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1985074 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1985074 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1985074 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1985074 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512            16     float    87.32    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00513042 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1985323 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1985323 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1985323 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1985323 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1985323 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1985323 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1985323 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1985323 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024            32     float    87.95    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0101877 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1985526 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1985526 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1985526 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1985526 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1985526 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1985526 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1985526 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1985526 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048            64     float    88.73    0.02    0.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0201972 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1985719 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1985719 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1985719 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1985719 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1985719 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1985719 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1985719 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1985719 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096           128     float    87.15    0.05    0.04    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0411241 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1985923 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1985923 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1985923 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1985923 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1985923 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1985923 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1985923 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1985923 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192           256     float    89.78    0.09    0.08    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0798403 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1986125 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1986125 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1986125 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1986125 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1986125 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1986125 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1986125 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1986125 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384           512     float    94.06    0.17    0.15    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.152409 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1986319 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1986319 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1986319 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1986319 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1986319 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1986319 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1986319 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1986319 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          1024     float    100.6    0.33    0.29    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.285137 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1986523 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1986523 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1986523 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1986523 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1986523 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1986523 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1986523 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1986523 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536          2048     float    102.0    0.64    0.56    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.562368 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1986726 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1986726 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1986726 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1986726 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1986726 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1986726 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1986726 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1986726 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072          4096     float    105.2    1.25    1.09    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.08979 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1986921 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1986921 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1986921 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1986921 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1986921 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1986921 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1986921 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1986921 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144          8192     float    114.2    2.30    2.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.00917 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1987123 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1987123 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1987123 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1987123 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1987123 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1987123 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1987123 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1987123 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288         16384     float    132.3    3.96    3.47    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.46726 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1987325 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1987325 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1987325 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1987325 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1987325 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1987325 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1987325 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1987325 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576         32768     float    165.9    6.32    5.53    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 5.52982 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1987518 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1987518 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1987518 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1987518 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1987518 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1987518 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1987518 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1987518 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152         65536     float    230.5    9.10    7.96    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 7.96101 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1987721 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1987721 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1987721 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1987721 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1987721 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1987721 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1987721 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1987721 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304        131072     float    372.9   11.25    9.84    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 9.84305 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1987925 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1987925 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1987925 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1987925 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1987925 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1987925 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1987925 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1987925 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608        262144     float    682.7   12.29   10.75    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.7507 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1988119 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1988119 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1988119 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1988119 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1988119 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1988119 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1988119 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1988119 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216        524288     float   1288.8   13.02   11.39    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.3904 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1988322 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1988322 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1988322 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1988322 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1988322 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1988322 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1988322 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1988322 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       1048576     float   2504.4   13.40   11.72    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.7235 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1988525 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1988525 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1988525 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1988525 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1988525 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1988525 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1988525 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1988525 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864       2097152     float   5042.8   13.31   11.64    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.6443 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1988718 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1988718 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1988718 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1988718 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1988718 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1988718 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1988718 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1988718 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728       4194304     float    10162   13.21   11.56    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.5571 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1988920 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1988920 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1988920 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1988920 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1988920 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1988920 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1988920 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1988920 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456       8388608     float    19899   13.49   11.80    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.8036 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1989122 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1989122 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1989122 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1989122 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1989122 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1989122 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1989122 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1989122 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912      16777216     float    32915   16.31   14.27    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 14.2718 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 1989317 on    hngpu21 device  0 [0x4f] NVIDIA A100-PCIE-40GB
+#   Rank  1 Pid 1989317 on    hngpu21 device  1 [0x50] NVIDIA A100-PCIE-40GB
+#   Rank  2 Pid 1989317 on    hngpu21 device  2 [0x53] NVIDIA A100-PCIE-40GB
+#   Rank  3 Pid 1989317 on    hngpu21 device  3 [0x57] NVIDIA A100-PCIE-40GB
+#   Rank  4 Pid 1989317 on    hngpu21 device  4 [0x9c] NVIDIA A100-PCIE-40GB
+#   Rank  5 Pid 1989317 on    hngpu21 device  5 [0x9d] NVIDIA A100-PCIE-40GB
+#   Rank  6 Pid 1989317 on    hngpu21 device  6 [0xa0] NVIDIA A100-PCIE-40GB
+#   Rank  7 Pid 1989317 on    hngpu21 device  7 [0xa4] NVIDIA A100-PCIE-40GB
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824      33554432     float    58767   18.27   15.99    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.9871 
+#

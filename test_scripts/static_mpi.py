@@ -57,7 +57,7 @@ def extract_info(file_name, info):
         
 def extract_from_file(dir, file):
     info = {}
-    for op in {"all_gather", "all_reduce", "broadcast", "reduce_scatter", "reduce"}:
+    for op in {"all_reduce", "all_gather", "reduce_scatter", "reduce", "broadcast"}:
         info[op] = {}
 
         for iter in range(6):

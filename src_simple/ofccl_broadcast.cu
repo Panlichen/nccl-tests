@@ -86,7 +86,7 @@ testResult_t BroadcastRunColl(void* sendbuff, void* recvbuff, int collId, CallBa
 testResult_t BroadcastPrepare(size_t count, ncclDataType_t datatype, ncclRedOp_t op, int root, ncclComm* comm, int collId, ofcclRankCtx_t rankCtx) {
 
   NCCLCHECK(ofcclPrepareBroadcast(count, datatype, root, comm, collId, rankCtx));
-  OFTEST_LOG(TEST, "tid<%lu> invoke ofcclPrepareBroadcast with count=%lu, collId=%d", pthread_self(), count, collId);
+  // OFTEST_LOG(TEST, "tid<%lu> invoke ofcclPrepareBroadcast with count=%lu, collId=%d", pthread_self(), count, collId);
   return testSuccess;
 }
 
