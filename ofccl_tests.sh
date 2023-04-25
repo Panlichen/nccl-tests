@@ -72,7 +72,7 @@ if [ -z $BINARY ];then
     BINARY="DEBUG"
     # BINARY="MS"
     # BINARY="PERF"
-    BINARY="CHAOS"
+    # BINARY="CHAOS"
 fi
 
 if [ "$BINARY" == "DEBUG" ];then
@@ -107,9 +107,14 @@ elif [ "$BINARY" == "MS" ];then
     export NITER=200
     export SHOW_ALL_PREPARED_COLL=1
     export WARMITER=0
-    export NBYTES=$3
+    export NBYTES=1K
     export MITER=4
     export CHECK=0
+    export RECV_SUCCESS_FACTOR=5
+    export RECV_SUCCESS_THRESHOLD=2000
+    export BASE_CTX_SWITCH_THRESHOLD=100
+    export TOLERANT_UNPROGRESSED_CNT=80000
+    export NUM_TRY_TASKQ_HEAD=5
 elif [ "$BINARY" == "CHAOS" ];then
     target="./build/ofccl_all_reduce_chaos_order_perf"
     if [ $MY_NUM_DEV = 4 ]; then
