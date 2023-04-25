@@ -72,7 +72,7 @@ if [ -z $BINARY ];then
     BINARY="DEBUG"
     # BINARY="MS"
     # BINARY="PERF"
-    # BINARY="CHAOS"
+    BINARY="CHAOS"
 fi
 
 if [ "$BINARY" == "DEBUG" ];then
@@ -115,12 +115,19 @@ elif [ "$BINARY" == "CHAOS" ];then
     if [ $MY_NUM_DEV = 4 ]; then
         export CUDA_VISIBLE_DEVICES=0,1,4,5
     fi
-    export NITER=200
+    export NITER=20
     export SHOW_ALL_PREPARED_COLL=1
     export WARMITER=0
-    export NBYTES=$3
+    export NBYTES=1K
     export MITER=1
     export CHECK=0
+    export RECV_SUCCESS_FACTOR=5
+    export RECV_SUCCESS_THRESHOLD=1000
+    export TOLERANT_UNPROGRESSED_CNT=10000
+    export BASE_CTX_SWITCH_THRESHOLD=200
+    export NUM_TRY_TASKQ_HEAD=3
+    export DEV_TRY_ROUND=10
+    export CHECK_REMAINING_SQE_INTERVAL=10000
 fi
 
 export NSYS_FILE="ofccl"
