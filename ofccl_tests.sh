@@ -1,5 +1,7 @@
 clear
 
+export “USAGE: bash ofccl_tests.sh MY_NUM_DEV FUNC SIZE”
+
 export MY_NUM_DEV=$1
 
 export DEBUG_CC=1
@@ -67,6 +69,9 @@ elif [ "$FUNC" == "R" ]; then
 elif [ "$FUNC" == "B" ]; then
     target="./build/ofccl_broadcast_perf"
 fi
+
+echo "FUNC="$FUNC
+echo "target="$target
 
 if [ -z $BINARY ];then
     BINARY="DEBUG"
@@ -157,6 +162,9 @@ elif [ "$RUN_TYPE" == "NCU" ];then
     # cmd="ncu --nvtx -f -o /home/panlichen/work2/ofccl/log/nsys/$NCU_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
     cmd="ncu $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
 fi
+
+export NCCL_DEBUG=INFO
+export NCCL_DEBUG_SUBSYS=NET
 
 echo cmd=$cmd
 $cmd #> /home/panlichen/work2/ofccl/ofccl.log
