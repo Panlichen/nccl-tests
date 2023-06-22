@@ -163,8 +163,8 @@ elif [ "$RUN_TYPE" == "NCU" ];then
     cmd="ncu $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
 fi
 
-export NCCL_DEBUG=INFO
-export NCCL_DEBUG_SUBSYS=NET
+# export NCCL_DEBUG=INFO
+# export NCCL_DEBUG_SUBSYS=NET
 
 echo cmd=$cmd
 $cmd #> /home/panlichen/work2/ofccl/ofccl.log
