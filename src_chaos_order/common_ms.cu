@@ -846,15 +846,15 @@ testResult_t BenchTime(struct threadArgs *args, ncclDataType_t type, ncclRedOp_t
       int miter = idxList[cudaDev][miter_idx];
       // OFTEST_LOG(TEST, "<%lu> Rank<%d>, invoke %dth startColl iter for coll_id = %d", pthread_self(), cudaDev, iter, miter);
       seenCqe[miter] = 0;
-      usleep(200);
+      // usleep(200);
       TESTCHECK(startColl(args, type, op, root, in_place,
                           iter * multi_iters + miter, miter, rankCtx));
     }
 
     TESTCHECK(completeColl(args, iter));
 
-    usleep(100000);
-    OFTEST_LOG(TEST, "<%lu> Rank<%d>, done %dth BenchTime iter for %d multi_iters", pthread_self(), cudaDev, iter, multi_iters);
+    // usleep(100000);
+    // OFTEST_LOG(TEST, "<%lu> Rank<%d>, done %dth BenchTime iter for %d multi_iters", pthread_self(), cudaDev, iter, multi_iters);
   }
 
   auto delta = std::chrono::high_resolution_clock::now() - start;

@@ -77,7 +77,7 @@ if [ -z $BINARY ];then
     BINARY="DEBUG"
     # BINARY="MS"
     # BINARY="PERF"
-    # BINARY="CHAOS"
+    BINARY="CHAOS"
 fi
 
 if [ "$BINARY" == "DEBUG" ];then
