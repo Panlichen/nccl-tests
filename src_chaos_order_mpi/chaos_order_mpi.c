@@ -17,6 +17,13 @@
 #include "cuda.h"
 #include "cuda_runtime.h"
 
+#define NUM_DEV_PER_NODE 8
+#define NUM_COLLS 8
+
+#define WARM_ITER 5
+#define ITER 20
+#define MY_NBC_ON 1
+
 CUcontext cuContext;
 
 int omb_get_local_rank()
@@ -89,7 +96,10 @@ int cleanup_accel (void)
 
 int main(int argc, char *argv[]) {
 
-    int i = 0, j, rank, size=1024;
+    int i = 0, j, rank, size;
+
+    int size_list[NUM_COLLS] = {256, 147456, 2048, 1024, 65536, 147456, 524288, 1048576};
+
     int numprocs;
     double latency = 0.0, t_start = 0.0, t_stop = 0.0;
     double tcomp = 0.0, tcomp_total = 0.0, latency_in_secs = 0.0;
@@ -100,49 +110,111 @@ int main(int argc, char *argv[]) {
     double init_total = 0.0, wait_total = 0.0;
     double avg_time = 0.0, max_time = 0.0, min_time = 0.0;
 
-    char *sendbuf = NULL;
-    char *recvbuf = NULL;
+    int coll_id_list[NUM_DEV_PER_NODE][NUM_COLLS] = {
+        {0, 5, 2, 6, 4, 1, 7, 3}, 
+        {1, 0, 3, 2, 5, 4, 6, 7}, 
+        {2, 1, 0, 3, 6, 7, 4, 5}, 
+        {3, 2, 1, 0, 7, 6, 5, 4}, 
+        {4, 3, 5, 7, 0, 2, 1, 6}, 
+        {5, 6, 7, 4, 1, 0, 3, 2}, 
+        {6, 7, 4, 1, 3, 5, 2, 0}, 
+        {7, 4, 6, 5, 2, 3, 0, 1}
+    };
 
     init_accel();
     
     MPI_Init(&argc, &argv);
+    // 后边对时间进行Reduce，使用这个，而不是单独的comm
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &numprocs);
-    MPI_Request request;
-    MPI_Status status;
 
+    char *sendbufs[NUM_COLLS];
+    char *recvbufs[NUM_COLLS];
+    MPI_Comm comms[NUM_COLLS];
 
-    cudaMalloc((void**)&sendbuf, size);
-    cudaMemset(sendbuf, 1, size);
-    cudaMalloc((void**)&recvbuf, size);
-    cudaMemset(recvbuf, 0, size);
-
-    // printf("rank: %d, size: %d, sendbuf @ %p, recvbuf @ %p\n", rank, size, sendbuf, recvbuf);
-
-    MPI_Barrier(MPI_COMM_WORLD);
-
-    for (int i = 0; i < 5; i++) {
-        MPI_Iallreduce(sendbuf, recvbuf, size / sizeof(float),
-                    MPI_FLOAT, MPI_SUM, MPI_COMM_WORLD,
-                    &request);
-        MPI_Wait(&request,&status);
-        MPI_Barrier(MPI_COMM_WORLD);
+    for (i = 0; i < NUM_COLLS; i++) {
+        MPI_Comm_dup(MPI_COMM_WORLD, &comms[i]);
     }
 
-    t_start = MPI_Wtime();
+    // 这里应该没必要重新在复制出来的comm里再算一遍rank和numprocs
+    // for (i = 0; i < NUM_COLLS; i++) {
+    //     MPI_Comm_rank(comms[i], &rank);
+    //     MPI_Comm_size(comms[i], &numprocs);
+    // }
 
-    MPI_Iallreduce(sendbuf, recvbuf, size / sizeof(float),
-                MPI_FLOAT, MPI_SUM, MPI_COMM_WORLD,
-                &request);
-    MPI_Wait(&request,&status);
+    MPI_Request request0, request1, request2, request3, request4, request5, request6, request7;
+    
+    MPI_Request requests[NUM_COLLS] = {request0, request1, request2, request3, request4, request5, request6, request7};
+    MPI_Status status_list[NUM_COLLS];
 
-    t_stop = MPI_Wtime();
+    for (i = 0; i < NUM_COLLS; i++) {
+        size = size_list[i];
+        cudaMalloc((void**)&sendbufs[i], size);
+        cudaMemset(sendbufs[i], 1, size);
+        cudaMalloc((void**)&recvbufs[i], size);
+        cudaMemset(recvbufs[i], 0, size);
+        
+        // printf("rank: %d, coll_id: %d, size: %d, sendbuf @ %p, recvbuf @ %p\n", rank, i, size, sendbufs[i], recvbufs[i]);
+    }
 
-    MPI_Barrier(MPI_COMM_WORLD);
 
-    timer += t_stop - t_start;
+    for (i = 0; i < NUM_COLLS; i++) {
+        MPI_Barrier(comms[i]);
+    }
 
-    latency = (timer * 1e6);
+    // comm是和coll一一对应的，进一步和buffer size一一对应
+
+    for (int i = 0; i < WARM_ITER + ITER; i++) {
+        for (int j = 0; j < NUM_COLLS; j++) {
+
+            // rank决定了使用哪个集合通信的调用序列，然后依次调用。
+            // int coll_id = coll_id_list[rank % NUM_DEV_PER_NODE][j];
+            int coll_id = j;  // 先让大家用同样的顺序启动
+
+            // printf("rank: %d, coll_id: %d, count: %d\n", rank, coll_id, size_list[coll_id]);
+
+            #ifdef MY_NBC_ON
+            MPI_Iallreduce(sendbufs[coll_id], recvbufs[coll_id], size_list[coll_id] / sizeof(float),
+                        MPI_FLOAT, MPI_SUM, comms[coll_id],
+                        &requests[coll_id]);
+            
+            printf("NBC, rank: %d, coll_id: %d, count: %d in %dth iter\n", rank, coll_id, size_list[coll_id], i);
+            #else
+            MPI_Allreduce(sendbufs[coll_id], recvbufs[coll_id], size_list[coll_id] / sizeof(float),
+                        MPI_FLOAT, MPI_SUM, comms[coll_id]);
+            MPI_Barrier(comms[coll_id]);
+            
+            printf("BLOCKING, rank: %d, coll_id: %d, count: %d in %dth iter\n", rank, coll_id, size_list[coll_id], i);
+            #endif
+        }
+        
+        #ifdef MY_NBC_ON
+        MPI_Waitall(NUM_COLLS, requests, status_list);
+        
+        for (int j = 0; j < NUM_COLLS; j++) {
+            // int coll_id = coll_id_list[rank % NUM_DEV_PER_NODE][j];
+            int coll_id = j;  // 先让大家用同样的顺序启动
+            MPI_Barrier(comms[coll_id]);
+        }
+        #endif
+
+        printf("rank: %d, colls done for %dth iter!!!!!!!!!!!!!!!!!!\n", rank, i);
+    }
+
+    // t_start = MPI_Wtime();
+
+    // MPI_Iallreduce(sendbuf, recvbuf, size / sizeof(float),
+    //             MPI_FLOAT, MPI_SUM, MPI_COMM_WORLD,
+    //             &request);
+    // MPI_Wait(&request,&status);
+
+    // t_stop = MPI_Wtime();
+
+    // MPI_Barrier(MPI_COMM_WORLD);
+
+    // timer += t_stop - t_start;
+
+    // latency = (timer * 1e6);
 
     MPI_Reduce(&latency, &min_time, 1, MPI_DOUBLE, MPI_MIN, 0, MPI_COMM_WORLD);
     MPI_Reduce(&latency, &max_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
@@ -158,12 +230,22 @@ int main(int argc, char *argv[]) {
         printf("avg_time: %lf\n", avg_time);
     }
 
-    cudaFree(sendbuf);
-    cudaFree(recvbuf);
+    for (i = 0; i < NUM_COLLS; i++) {
+        cudaFree(sendbufs[i]);
+        cudaFree(recvbufs[i]);
+    }
+    // printf("rank: %d, cudaFree OK\n", rank);
+    
+    for (i = 0; i < NUM_COLLS; i++) {
+        MPI_Comm_free(&comms[i]);
+    }
+    // printf("rank: %d, MPI_Comm_free OK\n", rank);
 
     MPI_Finalize();
+    // printf("rank: %d, MPI_Finalize OK\n", rank);
 
     cleanup_accel();
+    // printf("rank: %d, cleanup_accel OK\n", rank);
 
     return 0;
 }
