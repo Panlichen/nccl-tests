@@ -22,7 +22,10 @@
 
 #define WARM_ITER 5
 #define ITER 20
-#define MY_NBC_ON 1
+
+#define MY_NBC_ON 1  // 1: use MPI non-blocking collectives; 0: use MPI blocking collectives
+#define USE_CUDA 1  // 1: use CUDA buffer; 0: use host buffer
+#define CHAOS_ORDER 1  // 1: use chaos order; 0: use same order
 
 CUcontext cuContext;
 
@@ -121,7 +124,9 @@ int main(int argc, char *argv[]) {
         {7, 4, 6, 5, 2, 3, 0, 1}
     };
 
+    #ifdef USE_CUDA
     init_accel();
+    #endif
     
     MPI_Init(&argc, &argv);
     // 后边对时间进行Reduce，使用这个，而不是单独的comm
@@ -141,20 +146,28 @@ int main(int argc, char *argv[]) {
     //     MPI_Comm_rank(comms[i], &rank);
     //     MPI_Comm_size(comms[i], &numprocs);
     // }
-
-    MPI_Request request0, request1, request2, request3, request4, request5, request6, request7;
     
-    MPI_Request requests[NUM_COLLS] = {request0, request1, request2, request3, request4, request5, request6, request7};
+    MPI_Request requests[NUM_COLLS];
     MPI_Status status_list[NUM_COLLS];
 
     for (i = 0; i < NUM_COLLS; i++) {
         size = size_list[i];
+
+        #ifdef USE_CUDA
         cudaMalloc((void**)&sendbufs[i], size);
         cudaMemset(sendbufs[i], 1, size);
         cudaMalloc((void**)&recvbufs[i], size);
         cudaMemset(recvbufs[i], 0, size);
+        printf("CUDA buffer: rank: %d, coll_id: %d, size: %d, sendbuf @ %p, recvbuf @ %p\n", rank, i, size, sendbufs[i], recvbufs[i]);
+        #else
+        size_t alignment = sysconf(_SC_PAGESIZE);
+        posix_memalign((void**)&sendbufs[i], alignment, size);
+        memset(sendbufs[i], 1, size);
+        posix_memalign((void**)&recvbufs[i], alignment, size);
+        memset(recvbufs[i], 0, size);
+        printf("Host buffer: rank: %d, coll_id: %d, size: %d, sendbuf @ %p, recvbuf @ %p\n", rank, i, size, sendbufs[i], recvbufs[i]);
+        #endif
         
-        // printf("rank: %d, coll_id: %d, size: %d, sendbuf @ %p, recvbuf @ %p\n", rank, i, size, sendbufs[i], recvbufs[i]);
     }
 
 
@@ -168,8 +181,11 @@ int main(int argc, char *argv[]) {
         for (int j = 0; j < NUM_COLLS; j++) {
 
             // rank决定了使用哪个集合通信的调用序列，然后依次调用。
-            // int coll_id = coll_id_list[rank % NUM_DEV_PER_NODE][j];
+            #ifdef CHAOS_ORDER
+            int coll_id = coll_id_list[rank % NUM_DEV_PER_NODE][j];
+            #else
             int coll_id = j;  // 先让大家用同样的顺序启动
+            #endif
 
             // printf("rank: %d, coll_id: %d, count: %d\n", rank, coll_id, size_list[coll_id]);
 
@@ -192,8 +208,11 @@ int main(int argc, char *argv[]) {
         MPI_Waitall(NUM_COLLS, requests, status_list);
         
         for (int j = 0; j < NUM_COLLS; j++) {
-            // int coll_id = coll_id_list[rank % NUM_DEV_PER_NODE][j];
+            #ifdef CHAOS_ORDER
+            int coll_id = coll_id_list[rank % NUM_DEV_PER_NODE][j];
+            #else
             int coll_id = j;  // 先让大家用同样的顺序启动
+            #endif
             MPI_Barrier(comms[coll_id]);
         }
         #endif
@@ -231,8 +250,13 @@ int main(int argc, char *argv[]) {
     }
 
     for (i = 0; i < NUM_COLLS; i++) {
+        #ifdef USE_CUDA
         cudaFree(sendbufs[i]);
         cudaFree(recvbufs[i]);
+        #else
+        free(sendbufs[i]);
+        free(recvbufs[i]);
+        #endif
     }
     // printf("rank: %d, cudaFree OK\n", rank);
     
@@ -244,7 +268,9 @@ int main(int argc, char *argv[]) {
     MPI_Finalize();
     // printf("rank: %d, MPI_Finalize OK\n", rank);
 
+    #ifdef USE_CUDA
     cleanup_accel();
+    #endif
     // printf("rank: %d, cleanup_accel OK\n", rank);
 
     return 0;
