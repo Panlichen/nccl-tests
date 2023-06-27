@@ -42,9 +42,3 @@
 [mpiexec@oneflow-27] Press Ctrl-C again to force abort
 [mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
 [mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
