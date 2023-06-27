@@ -1,50 +1,1075 @@
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
-[mpiexec@oneflow-27] Sending Ctrl-C to processes as requested
-[mpiexec@oneflow-27] Press Ctrl-C again to force abort
+# nThread 8 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 558823 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 558823 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 558823 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 558823 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 558823 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 558823 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 558823 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 558823 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1985184 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1985184 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1985184 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1985184 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1985184 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1985184 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1985184 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1985184 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1849346 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1849346 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1849346 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1849346 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1849346 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1849346 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1849346 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1849346 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 251474 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 251474 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 251474 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 251474 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 251474 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 251474 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 251474 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 251474 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64            16     float     sum    53.28    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00232748 
+#
+# nThread 8 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 559433 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 559433 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 559433 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 559433 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 559433 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 559433 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 559433 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 559433 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1985766 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1985766 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1985766 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1985766 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1985766 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1985766 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1985766 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1985766 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1849974 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1849974 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1849974 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1849974 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1849974 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1849974 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1849974 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1849974 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 251902 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 251902 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 251902 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 251902 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 251902 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 251902 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 251902 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 251902 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128            32     float     sum    74.63    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00332287 
+#
+# nThread 8 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 559979 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 559979 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 559979 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 559979 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 559979 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 559979 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 559979 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 559979 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1986344 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1986344 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1986344 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1986344 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1986344 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1986344 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1986344 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1986344 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1850785 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1850785 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1850785 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1850785 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1850785 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1850785 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1850785 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1850785 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 252362 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 252362 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 252362 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 252362 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 252362 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 252362 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 252362 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 252362 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256            64     float     sum    79.17    0.00    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00626512 
+#
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 560414 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 560414 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 560414 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 560414 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 560414 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 560414 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 560414 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 560414 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1986890 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1986890 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1986890 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1986890 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1986890 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1986890 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1986890 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1986890 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1851469 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1851469 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1851469 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1851469 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1851469 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1851469 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1851469 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1851469 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 252923 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 252923 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 252923 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 252923 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 252923 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 252923 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 252923 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 252923 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512           128     float     sum    84.43    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0117494 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 560850 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 560850 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 560850 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 560850 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 560850 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 560850 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 560850 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 560850 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1987462 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1987462 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1987462 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1987462 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1987462 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1987462 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1987462 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1987462 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1852239 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1852239 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1852239 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1852239 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1852239 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1852239 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1852239 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1852239 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 253373 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 253373 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 253373 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 253373 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 253373 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 253373 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 253373 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 253373 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           256     float     sum    84.41    0.01    0.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0235042 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 561289 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 561289 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 561289 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 561289 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 561289 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 561289 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 561289 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 561289 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1988048 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1988048 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1988048 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1988048 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1988048 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1988048 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1988048 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1988048 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1852959 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1852959 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1852959 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1852959 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1852959 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1852959 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1852959 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1852959 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 253830 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 253830 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 253830 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 253830 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 253830 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 253830 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 253830 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 253830 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           512     float     sum    69.51    0.03    0.06    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0570866 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 561738 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 561738 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 561738 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 561738 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 561738 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 561738 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 561738 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 561738 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1988637 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1988637 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1988637 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1988637 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1988637 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1988637 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1988637 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1988637 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1853718 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1853718 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1853718 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1853718 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1853718 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1853718 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1853718 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1853718 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 254302 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 254302 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 254302 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 254302 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 254302 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 254302 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 254302 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 254302 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096          1024     float     sum    95.20    0.04    0.08    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0833651 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 562380 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 562380 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 562380 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 562380 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 562380 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 562380 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 562380 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 562380 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1989221 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1989221 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1989221 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1989221 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1989221 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1989221 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1989221 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1989221 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1854451 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1854451 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1854451 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1854451 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1854451 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1854451 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1854451 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1854451 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 254839 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 254839 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 254839 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 254839 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 254839 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 254839 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 254839 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 254839 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          2048     float     sum    104.5    0.08    0.15    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.151914 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 563022 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 563022 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 563022 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 563022 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 563022 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 563022 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 563022 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 563022 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1989785 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1989785 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1989785 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1989785 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1989785 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1989785 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1989785 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1989785 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1855207 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1855207 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1855207 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1855207 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1855207 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1855207 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1855207 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1855207 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 255277 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 255277 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 255277 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 255277 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 255277 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 255277 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 255277 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 255277 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          4096     float     sum    112.9    0.15    0.28    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.281195 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 563834 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 563834 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 563834 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 563834 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 563834 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 563834 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 563834 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 563834 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1990379 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1990379 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1990379 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1990379 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1990379 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1990379 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1990379 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1990379 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1856096 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1856096 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1856096 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1856096 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1856096 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1856096 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1856096 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1856096 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 255718 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 255718 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 255718 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 255718 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 255718 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 255718 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 255718 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 255718 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          8192     float     sum    59863    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00106055 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 564313 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 564313 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 564313 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 564313 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 564313 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 564313 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 564313 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 564313 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1990939 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1990939 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1990939 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1990939 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1990939 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1990939 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1990939 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1990939 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1856863 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1856863 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1856863 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1856863 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1856863 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1856863 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1856863 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1856863 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 256167 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 256167 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 256167 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 256167 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 256167 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 256167 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 256167 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 256167 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536         16384     float     sum    242.4    0.27    0.52    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.523855 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 564767 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 564767 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 564767 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 564767 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 564767 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 564767 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 564767 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 564767 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1991536 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1991536 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1991536 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1991536 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1991536 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1991536 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1991536 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1991536 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1857754 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1857754 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1857754 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1857754 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1857754 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1857754 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1857754 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1857754 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 256687 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 256687 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 256687 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 256687 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 256687 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 256687 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 256687 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 256687 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         32768     float     sum    466.3    0.28    0.54    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.544615 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 565219 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 565219 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 565219 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 565219 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 565219 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 565219 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 565219 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 565219 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1992098 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1992098 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1992098 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1992098 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1992098 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1992098 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1992098 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1992098 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1859791 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1859791 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1859791 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1859791 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1859791 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1859791 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1859791 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1859791 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 257122 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 257122 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 257122 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 257122 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 257122 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 257122 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 257122 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 257122 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         65536     float     sum   585211    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.000867899 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 565960 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 565960 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 565960 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 565960 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 565960 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 565960 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 565960 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 565960 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1992798 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1992798 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1992798 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1992798 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1992798 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1992798 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1992798 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1992798 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1873986 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1873986 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1873986 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1873986 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1873986 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1873986 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1873986 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1873986 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 257688 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 257688 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 257688 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 257688 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 257688 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 257688 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 257688 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 257688 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288        131072     float     sum    534.7    0.98    1.90    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.89966 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 566541 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 566541 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 566541 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 566541 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 566541 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 566541 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 566541 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 566541 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1993379 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1993379 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1993379 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1993379 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1993379 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1993379 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1993379 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1993379 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1874595 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1874595 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1874595 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1874595 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1874595 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1874595 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1874595 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1874595 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 258129 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 258129 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 258129 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 258129 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 258129 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 258129 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 258129 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 258129 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        262144     float     sum    822.0    1.28    2.47    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.47143 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 567166 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 567166 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 567166 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 567166 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 567166 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 567166 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 567166 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 567166 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1993942 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1993942 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1993942 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1993942 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1993942 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1993942 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1993942 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1993942 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1875224 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1875224 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1875224 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1875224 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1875224 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1875224 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1875224 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1875224 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 258693 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 258693 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 258693 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 258693 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 258693 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 258693 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 258693 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 258693 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        524288     float     sum   1450.9    1.45    2.80    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.80053 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 567584 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 567584 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 567584 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 567584 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 567584 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 567584 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 567584 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 567584 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1994515 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1994515 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1994515 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1994515 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1994515 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1994515 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1994515 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1994515 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1877387 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1877387 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1877387 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1877387 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1877387 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1877387 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1877387 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1877387 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 259122 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 259122 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 259122 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 259122 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 259122 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 259122 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 259122 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 259122 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304       1048576     float     sum   2142.5    1.96    3.79    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.79291 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 567983 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 567983 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 567983 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 567983 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 567983 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 567983 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 567983 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 567983 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1995087 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1995087 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1995087 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1995087 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1995087 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1995087 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1995087 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1995087 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1878529 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1878529 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1878529 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1878529 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1878529 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1878529 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1878529 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1878529 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 259580 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 259580 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 259580 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 259580 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 259580 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 259580 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 259580 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 259580 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       2097152     float     sum   4071.7    2.06    3.99    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.99169 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 568413 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 568413 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 568413 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 568413 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 568413 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 568413 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 568413 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 568413 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1995653 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1995653 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1995653 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1995653 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1995653 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1995653 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1995653 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1995653 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1879239 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1879239 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1879239 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1879239 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1879239 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1879239 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1879239 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1879239 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 260035 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 260035 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 260035 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 260035 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 260035 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 260035 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 260035 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 260035 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       4194304     float     sum   8068.1    2.08    4.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.02893 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 568820 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 568820 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 568820 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 568820 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 568820 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 568820 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 568820 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 568820 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1996219 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1996219 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1996219 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1996219 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1996219 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1996219 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1996219 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1996219 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1879944 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1879944 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1879944 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1879944 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1879944 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1879944 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1879944 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1879944 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 260543 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 260543 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 260543 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 260543 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 260543 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 260543 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 260543 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 260543 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       8388608     float     sum    16119    2.08    4.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.03322 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 569200 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 569200 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 569200 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 569200 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 569200 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 569200 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 569200 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 569200 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1996779 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1996779 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1996779 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1996779 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1996779 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1996779 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1996779 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1996779 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1880651 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1880651 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1880651 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1880651 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1880651 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1880651 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1880651 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1880651 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 261053 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 261053 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 261053 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 261053 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 261053 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 261053 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 261053 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 261053 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864      16777216     float     sum    32225    2.08    4.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.03492 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 569605 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 569605 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 569605 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 569605 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 569605 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 569605 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 569605 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 569605 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1997358 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1997358 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1997358 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1997358 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1997358 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1997358 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1997358 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1997358 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1881403 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1881403 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1881403 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1881403 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1881403 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1881403 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1881403 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1881403 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 261484 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 261484 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 261484 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 261484 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 261484 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 261484 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 261484 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 261484 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      33554432     float     sum    64482    2.08    4.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.03288 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 570039 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 570039 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 570039 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 570039 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 570039 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 570039 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 570039 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 570039 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1997946 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1997946 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1997946 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1997946 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1997946 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1997946 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1997946 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1997946 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1882147 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1882147 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1882147 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1882147 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1882147 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1882147 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1882147 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1882147 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 261894 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 261894 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 261894 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 261894 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 261894 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 261894 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 261894 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 261894 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      67108864     float     sum   128905    2.08    4.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.03472 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 570584 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 570584 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 570584 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 570584 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 570584 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 570584 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 570584 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 570584 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1998523 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1998523 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1998523 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1998523 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1998523 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1998523 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1998523 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1998523 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1884199 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1884199 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1884199 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1884199 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1884199 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1884199 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1884199 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1884199 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 262340 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 262340 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 262340 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 262340 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 262340 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 262340 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 262340 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 262340 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912     134217728     float     sum   257798    2.08    4.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.0349 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 570994 on oneflow-27 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  1 Pid 570994 on oneflow-27 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank  2 Pid 570994 on oneflow-27 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank  3 Pid 570994 on oneflow-27 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank  4 Pid 570994 on oneflow-27 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank  5 Pid 570994 on oneflow-27 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank  6 Pid 570994 on oneflow-27 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank  7 Pid 570994 on oneflow-27 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank  8 Pid 1999272 on oneflow-25 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank  9 Pid 1999272 on oneflow-25 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 10 Pid 1999272 on oneflow-25 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 11 Pid 1999272 on oneflow-25 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 12 Pid 1999272 on oneflow-25 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 13 Pid 1999272 on oneflow-25 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 14 Pid 1999272 on oneflow-25 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 15 Pid 1999272 on oneflow-25 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 16 Pid 1886699 on oneflow-26 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 17 Pid 1886699 on oneflow-26 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 18 Pid 1886699 on oneflow-26 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 19 Pid 1886699 on oneflow-26 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 20 Pid 1886699 on oneflow-26 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 21 Pid 1886699 on oneflow-26 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 22 Pid 1886699 on oneflow-26 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 23 Pid 1886699 on oneflow-26 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#   Rank 24 Pid 262861 on oneflow-28 device  0 [0x0f] NVIDIA GeForce RTX 3090
+#   Rank 25 Pid 262861 on oneflow-28 device  1 [0x10] NVIDIA GeForce RTX 3090
+#   Rank 26 Pid 262861 on oneflow-28 device  2 [0x11] NVIDIA GeForce RTX 3090
+#   Rank 27 Pid 262861 on oneflow-28 device  3 [0x12] NVIDIA GeForce RTX 3090
+#   Rank 28 Pid 262861 on oneflow-28 device  4 [0x9b] NVIDIA GeForce RTX 3090
+#   Rank 29 Pid 262861 on oneflow-28 device  5 [0x9c] NVIDIA GeForce RTX 3090
+#   Rank 30 Pid 262861 on oneflow-28 device  6 [0x9d] NVIDIA GeForce RTX 3090
+#   Rank 31 Pid 262861 on oneflow-28 device  7 [0x9e] NVIDIA GeForce RTX 3090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     268435456     float     sum   517220    2.08    4.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.02222 
+#

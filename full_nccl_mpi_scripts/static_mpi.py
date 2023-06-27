@@ -57,7 +57,8 @@ def extract_info(file_name, info):
         
 def extract_from_file(dir, file):
     info = {}
-    for op in {"all_reduce", "all_gather", "reduce_scatter", "reduce", "broadcast"}:
+    # for op in {"all_reduce", "all_gather", "reduce_scatter", "reduce", "broadcast"}:
+    for op in {"all_reduce"}:
         info[op] = {}
 
         for iter in range(6):
@@ -76,11 +77,11 @@ def extract_from_file(dir, file):
                 info[op][str(byte)]["algbw"] = sorted(info[op][str(byte)]["algbw"],reverse=True)
                 info[op][str(byte)]["busbw"] = sorted(info[op][str(byte)]["busbw"],reverse=True)
 
-            for type in ["time", "algbw","busbw"]:
-                    i = 0
-                    while (info[op][str(byte)][type][i] > info[op][str(byte)][type][i+1]*1.5 or info[op][str(byte)][type][i]*1.5 < info[op][str(byte)][type][i+1])and i <3:
-                        i = i+1
-                    info[op][str(byte)][type]=info[op][str(byte)][type][i:i+3]
+            # for type in ["time", "algbw","busbw"]:
+            #         i = 0
+            #         while (info[op][str(byte)][type][i] > info[op][str(byte)][type][i+1]*1.5 or info[op][str(byte)][type][i]*1.5 < info[op][str(byte)][type][i+1])and i <3:
+            #             i = i+1
+            #         info[op][str(byte)][type]=info[op][str(byte)][type][i:i+3]
 
             byte = byte*2
     
@@ -95,7 +96,7 @@ def write_sheet(op,ws,type,rowOffset, colOffset,title):
     global max_byte
     
     # title
-    for c in range(0,3):
+    for c in range(0,6):
         ws.cell(row=rowOffset, column=c+colOffset, value=title+str(c))
     ws.cell(row=rowOffset, column=3+colOffset, value=title+"avg")
 
@@ -104,12 +105,12 @@ def write_sheet(op,ws,type,rowOffset, colOffset,title):
     i = 1
     while byte <= max_byte :
         sum = 0
-        for c in range(0,3):
+        for c in range(0,6):
             sum += float(op[str(byte)][type][c])
             ws.cell(row=i+rowOffset, column=c+colOffset, value=op[str(byte)][type][c])
 
-        avg = sum/3
-        ws.cell(row=i+rowOffset, column=3+colOffset, value=avg)
+        avg = sum/6
+        ws.cell(row=i+rowOffset, column=6+colOffset, value=avg)
         byte=byte*2
         i = i+1
 
@@ -151,37 +152,37 @@ def write_excel(info, wb):
             write_y_axi(ws_tm, 2,1)
             write_sheet(value, ws_tm, "time", 2, 2, "nccl_time")
 
-    if "occl" in info:
-        for (key,value) in info["occl"].items():
+    # if "occl" in info:
+    #     for (key,value) in info["occl"].items():
             
-            if key+"bw" in wb:
-                ws_bw = wb[key+"bw"]
-            else:
-                ws_bw = wb.create_sheet(key+"bw")
-            if key+"tm" in wb:
-                ws_tm = wb[key+"tm"]
-            else :
-                ws_tm = wb.create_sheet(key+"tm")
+    #         if key+"bw" in wb:
+    #             ws_bw = wb[key+"bw"]
+    #         else:
+    #             ws_bw = wb.create_sheet(key+"bw")
+    #         if key+"tm" in wb:
+    #             ws_tm = wb[key+"tm"]
+    #         else :
+    #             ws_tm = wb.create_sheet(key+"tm")
 
-            #write_y_axi(ws, 2,1)
-            write_sheet(value, ws_bw, "algbw", 2, 6, "occl_algbw")
-            write_sheet(value, ws_bw, "busbw", 2, 16,"occl_busbw")
-            write_sheet(value, ws_tm, "time" ,2 ,6 , "occl_time")
+    #         #write_y_axi(ws, 2,1)
+    #         write_sheet(value, ws_bw, "algbw", 2, 6, "occl_algbw")
+    #         write_sheet(value, ws_bw, "busbw", 2, 16,"occl_busbw")
+    #         write_sheet(value, ws_tm, "time" ,2 ,6 , "occl_time")
 
-    if "nccl" in info and "occl" in info:
-        for (key,value) in info["nccl"].items():
-            ws_bw = wb[key+"bw"]
-            ws_tm = wb[key+"tm"]
-            write_formula(ws_bw,2,"E","I","J")
-            write_formula(ws_bw,2,"O","S","T")
-            write_formula(ws_tm,2,"E","I","J")
+    # if "nccl" in info and "occl" in info:
+    #     for (key,value) in info["nccl"].items():
+    #         ws_bw = wb[key+"bw"]
+    #         ws_tm = wb[key+"tm"]
+    #         write_formula(ws_bw,2,"E","I","J")
+    #         write_formula(ws_bw,2,"O","S","T")
+    #         write_formula(ws_tm,2,"E","I","J")
 
 
 if __name__ == "__main__":
     info = {}
-    info["nccl"] = extract_from_file("./mpi_res","nccl")
-    info["occl"] = extract_from_file("./mpi_res","occl")
+    info["nccl"] = extract_from_file("./mpi_res_4hosts","nccl")
+    # info["occl"] = extract_from_file("./mpi_res","occl")
     #info["nccl"] = extract_occl()
     wb = openpyxl.Workbook()
     write_excel(info, wb)
-    wb.save('2hosts_16cards.xlsx')
+    wb.save('4hosts_full_nccl_6data.xlsx')
