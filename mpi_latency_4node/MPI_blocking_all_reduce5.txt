@@ -1,100 +1,100 @@
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-64                     51.67
+64                     44.62
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-128                    43.99
+128                    41.61
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-256                    46.41
+256                    47.69
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-512                    42.85
+512                    40.67
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-1024                   48.44
+1024                   47.91
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-2048                   55.27
+2048                   60.29
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-4096                   58.91
+4096                   64.87
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-8192                   70.67
+8192                   70.01
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-16384                  90.33
+16384                  88.52
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-32768                 109.82
+32768                 128.50
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-65536                 164.39
+65536                 183.13
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-131072                330.59
+131072                426.84
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-262144                624.45
+262144                905.87
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-524288               1114.47
+524288               1370.97
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-1048576              2657.13
+1048576              2722.80
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-2097152              5222.35
+2097152              4964.03
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-4194304              9608.59
+4194304              9628.45
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-8388608             17008.51
+8388608             17017.16
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-16777216            33575.59
+16777216            33808.10
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-33554432            70186.22
+33554432            70522.72
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-67108864           143534.15
+67108864           142700.47
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-134217728          300646.69
+134217728          300257.01
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-268435456          614368.88
+268435456          607220.37
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-536870912         1227082.68
+536870912         1223461.76
 
 # OSU MPI-CUDA Allreduce Latency Test v5.9
 # Size       Avg Latency(us)
-1073741824        2466092.45
+1073741824        2461643.12

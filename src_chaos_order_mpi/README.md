@@ -3,5 +3,5 @@
 
 export LD_LIBRARY_PATH=/data/home/panlichen/mvapich/mvapich-build/lib
 
-/data/home/panlichen/mvapich/mvapich-build/bin/mpiexec -n 8 -f local.txt -env MV2_SMP_USE_CMA=0 -env MV2_USE_CUDA=1 /home/panlichen/work2/mpi/nccl-tests/src_chaos_order_mpi/get_local_rank /home/panlichen/work2/mpi/nccl-tests/src_chaos_order_mpi/test_mpi
+/data/home/panlichen/mvapich/mvapich-build/bin/mpiexec -n 8 -f local.txt -env MV2_SMP_USE_CMA=0 -env MV2_USE_CUDA=1 /data/home/panlichen/zrk/work2/nccl-tests/src_chaos_order_mpi/get_local_rank /data/home/panlichen/zrk/work2/nccl-tests/src_chaos_order_mpi/test_mpi
 ```

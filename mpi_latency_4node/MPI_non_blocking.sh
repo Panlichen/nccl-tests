@@ -18,13 +18,13 @@ do
   for size in "${sizes[@]}"
   do
     # 构建命令
-    cmd="/data/home/panlichen/mvapich/mvapich-build/bin/mpiexec -n 32 -f 4node.txt -env MV2_SMP_USE_CMA=0 -env MV2_USE_CUDA=1 -env MV2_HOMOGENEOUS_CLUSTER=1 /data/home/panlichen/mvapich/mvapich-build/get_local_rank /data/home/panlichen/mvapich/mvapich-build/libexec/osu-micro-benchmarks/mpi/collective/osu_iallreduce -d cuda -r CPU -x 2 -i 10 -m $size:$size"
+    cmd="/data/home/panlichen/mvapich/mvapich-build/bin/mpiexec -n 32 -f 4node.txt -env MV2_SMP_USE_CMA=0 -env MV2_USE_CUDA=1 -env MV2_HOMOGENEOUS_CLUSTER=1 /data/home/panlichen/mvapich/mvapich-build/get_local_rank /data/home/panlichen/mvapich/mvapich-build/libexec/osu-micro-benchmarks/mpi/collective/osu_iallreduce -d cuda -r CPU -x 2 -i 10 -m $size:$size -M 1273741824"
 
     # 打印要执行的命令
     echo "Running command: $cmd"
 
     # 执行命令并将输出重定向到 iter 对应的文件
-    eval "$cmd" | tee -a "MPI_blocking_all_reduce$iter.txt"
+    eval "$cmd" | tee -a "MPI_non_blocking_all_reduce$iter.txt"
 
     # 休眠 10 秒
     sleep 10

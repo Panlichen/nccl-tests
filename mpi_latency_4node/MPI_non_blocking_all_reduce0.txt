@@ -1,0 +1,116 @@
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+64                    227.77            121.10            116.74              8.63
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+128                   235.14            124.65            120.23              8.10
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+256                   237.65            123.81            119.38              4.64
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+512                   240.57            126.50            121.98              6.48
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+1024                  240.50            126.94            122.34              7.17
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+2048                  250.77            133.16            128.42              8.42
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+4096                  365.19            199.12            192.33             13.65
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+8192                  381.88            210.05            202.87             15.30
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+16384                 686.95            354.16            342.28              2.77
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+32768                 758.65            386.93            373.96              0.60
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+65536                 948.33            483.58            467.54              0.60
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+131072               1326.06            700.98            678.02              7.81
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 2304921 RUNNING AT 11.11.1.26
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 2305654 RUNNING AT 11.11.1.26
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 2306129 RUNNING AT 11.11.1.26
+=   EXIT CODE: 139
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+
+# OSU MPI-CUDA Non-blocking Allreduce Latency Test v5.9
+# Overall = Coll. Init + Compute + MPI_Test + MPI_Wait
+
+# Size           Overall(us)       Compute(us)    Pure Comm.(us)        Overlap(%)
