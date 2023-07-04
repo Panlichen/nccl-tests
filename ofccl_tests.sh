@@ -1,6 +1,6 @@
 clear
 
-export “USAGE: bash ofccl_tests.sh MY_NUM_DEV FUNC SIZE”
+echo “USAGE: bash ofccl_tests.sh MY_NUM_DEV FUNC SIZE”
 
 export MY_NUM_DEV=$1
 
@@ -77,7 +77,7 @@ if [ -z $BINARY ];then
     BINARY="DEBUG"
     # BINARY="MS"
     # BINARY="PERF"
-    BINARY="CHAOS"
+    # BINARY="CHAOS"
 fi
 
 if [ "$BINARY" == "DEBUG" ];then
