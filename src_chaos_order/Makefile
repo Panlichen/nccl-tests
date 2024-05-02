@@ -35,6 +35,7 @@ CUDA_MAJOR = $(shell echo $(CUDA_VERSION) | cut -d "." -f 1)
 # endif
 
 CUDA_GENCODE_3080   = -gencode=arch=compute_86,code=sm_86
+# https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/ 添加 80，89，90，90a
 CUDA_GENCODE_ampere   = -gencode=arch=compute_80,code=sm_80
 CUDA_GENCODE_2080   = -gencode=arch=compute_75,code=sm_75
 
