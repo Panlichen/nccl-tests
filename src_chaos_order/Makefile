@@ -41,8 +41,9 @@ CUDA_GENCODE_2080   = -gencode=arch=compute_75,code=sm_75
 
 
 
-CUDA_GENCODE_4090	= -gencode=arch=compute_89,code=sm_89
-CUDA_GENCODE_h800   = -gencode=arch=compute_90,code=sm_90 \
+
+CUDA_GENCODE_h800   = -gencode=arch=compute_89,code=sm_89 \
+                      -gencode=arch=compute_90,code=sm_90 \
                       -gencode=arch=compute_90a,code=sm_90a
 
 CARDNAME ?= h800
