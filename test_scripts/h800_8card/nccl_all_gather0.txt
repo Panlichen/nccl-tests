@@ -1,0 +1,513 @@
+# nThread 8 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 180667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64             2     float    36.71    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00152537 
+#
+# nThread 8 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 180911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128             4     float    35.25    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00317721 
+#
+# nThread 8 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 181181 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256             8     float    34.54    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00648512 
+#
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 181424 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512            16     float    34.22    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0130926 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 181667 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024            32     float    34.14    0.03    0.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.026247 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 181920 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048            64     float    34.67    0.06    0.05    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0516829 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 182177 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096           128     float    34.80    0.12    0.10    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.102985 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 182425 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192           256     float    35.89    0.23    0.20    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.199749 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 182679 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384           512     float    37.22    0.44    0.39    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.38516 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 182924 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          1024     float    39.35    0.83    0.73    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.728559 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 183161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536          2048     float    41.60    1.58    1.38    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.37839 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 183408 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072          4096     float    45.90    2.86    2.50    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.49852 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 183657 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144          8192     float    51.91    5.05    4.42    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.41866 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 183932 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288         16384     float    60.34    8.69    7.60    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 7.60234 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 184186 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576         32768     float    61.13   17.15   15.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.0096 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 184420 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152         65536     float    64.23   32.65   28.57    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 28.57 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 184660 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304        131072     float    69.76   60.12   52.61    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 52.6081 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 184911 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608        262144     float    81.72  102.66   89.82    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 89.8231 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 185171 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216        524288     float    122.6  136.83  119.73    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 119.73 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 185413 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       1048576     float    210.1  159.72  139.75    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 139.754 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 185658 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864       2097152     float    389.0  172.51  150.95    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 150.947 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 185915 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728       4194304     float    747.0  179.69  157.23    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 157.226 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 186161 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456       8388608     float   1458.0  184.11  161.09    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 161.093 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 186403 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912      16777216     float   2887.1  185.96  162.71    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 162.711 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 186655 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824      33554432     float   5740.9  187.03  163.65    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 163.654 
+#
+# nThread 8 nGpus 1 minBytes 2147483648 maxBytes 2147483648 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 186887 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  2147483648      67108864     float    11419  188.06  164.55    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 164.553 
+#
+# nThread 8 nGpus 1 minBytes 4294967296 maxBytes 4294967296 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  0 [0x0f] NVIDIA H800
+#   Rank  1 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  1 [0x34] NVIDIA H800
+#   Rank  2 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  2 [0x48] NVIDIA H800
+#   Rank  3 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  3 [0x5a] NVIDIA H800
+#   Rank  4 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  4 [0x87] NVIDIA H800
+#   Rank  5 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  5 [0xae] NVIDIA H800
+#   Rank  6 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  6 [0xc2] NVIDIA H800
+#   Rank  7 Pid 187135 on notebook-8ebab75f-656a-4c0b-a751-68572168f243-0 device  7 [0xd7] NVIDIA H800
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  4294967296     134217728     float    22750  188.79  165.19    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 165.193 
+#
