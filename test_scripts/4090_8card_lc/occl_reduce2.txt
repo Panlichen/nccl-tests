@@ -1,0 +1,540 @@
+# nThread 8 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140156260618240> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 166868 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64            16     float     sum       0    21.27    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00300945 
+#
+# nThread 8 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139752604688384> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167003 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128            32     float     sum       0    20.56    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00622696 
+#
+# nThread 8 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140446041489408> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167148 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256            64     float     sum       0    20.67    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0123835 
+#
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140581053415424> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167288 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512           128     float     sum       0    38.73    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0132213 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139666666139648> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           256     float     sum       0    54.00    0.02    0.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0189646 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139904643780608> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167558 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           512     float     sum       0    21.03    0.10    0.10    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0973814 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139644092649472> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167703 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096          1024     float     sum       0    23.53    0.17    0.17    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.174058 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140143276634112> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          2048     float     sum       0    63.41    0.13    0.13    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.129201 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140456817725440> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 167979 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          4096     float     sum       0    25.16    0.65    0.65    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.651302 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140314503852032> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168114 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          8192     float     sum       0    29.24    1.12    1.12    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.12081 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140302425055232> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168259 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536         16384     float     sum       0    36.20    1.81    1.81    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.81027 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139977852219392> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168399 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         32768     float     sum       0    78.83    1.66    1.66    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.66266 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140613354004480> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168534 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         65536     float     sum       0    84.61    3.10    3.10    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.0983 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139653691555840> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168669 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288        131072     float     sum       0    152.3    3.44    3.44    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.44301 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139775023980544> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168814 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        262144     float     sum       0    287.4    3.65    3.65    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.64897 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140659966767104> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 168954 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        524288     float     sum       0    596.9    3.51    3.51    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.51337 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139854814244864> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169089 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304       1048576     float     sum       0   1251.9    3.35    3.35    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.35048 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139713639665664> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169224 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       2097152     float     sum       0   2675.0    3.14    3.14    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.13592 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139816317206528> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169369 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       4194304     float     sum       0   5561.0    3.02    3.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.01696 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140586350743552> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169509 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       8388608     float     sum       0    11311    2.97    2.97    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.96644 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139665478377472> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169644 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864      16777216     float     sum       0    22889    2.93    2.93    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.93187 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140183966679040> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169779 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      33554432     float     sum       0    45905    2.92    2.92    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.92382 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <139810565586944> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 169929 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      67108864     float     sum       0    92209    2.91    2.91    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.91117 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140561456390144> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 170079 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912     134217728     float     sum       0   184198    2.91    2.91    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.91463 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140292927823872> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 170229 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     268435456     float     sum       0   369085    2.91    2.91    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.9092 
+#
+# nThread 8 nGpus 1 minBytes 2147483648 maxBytes 2147483648 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140168762626048> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 170379 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  2147483648     536870912     float     sum       0   738249    2.91    2.91    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.90889 
+#
+# nThread 8 nGpus 1 minBytes 4294967296 maxBytes 4294967296 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+(testlog) [common_simple.cu:1308] <run> TEST_INIT <140326552117248> Rank<0>, multi_iters = 1
+#   Rank  0 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 170544 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  4294967296    1073741824     float     sum       0  1472766    2.92    2.92    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.91626 
+#

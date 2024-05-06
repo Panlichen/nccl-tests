@@ -1,0 +1,513 @@
+# nThread 8 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 139547 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64            16     float       0    17.39    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00368094 
+#
+# nThread 8 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 139697 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128            32     float       0    19.37    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00660941 
+#
+# nThread 8 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 139843 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256            64     float       0    18.84    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0135897 
+#
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 139982 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512           128     float       0    21.98    0.02    0.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0232955 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 140138 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           256     float       0    18.29    0.06    0.06    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0559775 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 140325 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           512     float       0    19.35    0.11    0.11    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.105826 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 140480 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096          1024     float       0    17.31    0.24    0.24    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.236608 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 140615 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          2048     float       0    17.84    0.46    0.46    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.459118 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 140750 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          4096     float       0    21.42    0.76    0.76    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.764797 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 140934 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          8192     float       0    26.13    1.25    1.25    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.25388 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141091 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536         16384     float       0    31.41    2.09    2.09    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.0864 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141228 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         32768     float       0    47.22    2.78    2.78    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.77601 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141370 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         65536     float       0    78.45    3.34    3.34    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.34152 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141515 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288        131072     float       0    145.2    3.61    3.61    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.61179 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141655 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        262144     float       0    270.4    3.88    3.88    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.87772 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141812 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        524288     float       0    562.0    3.73    3.73    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.73164 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 141958 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304       1048576     float       0   1164.5    3.60    3.60    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.60191 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142107 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       2097152     float       0   2519.7    3.33    3.33    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.32918 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142255 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       4194304     float       0   5367.0    3.13    3.13    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.12601 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142394 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       8388608     float       0    11092    3.03    3.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.02522 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142533 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864      16777216     float       0    22498    2.98    2.98    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.98288 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142682 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      33554432     float       0    45347    2.96    2.96    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.95981 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142823 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      67108864     float       0    90982    2.95    2.95    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.95041 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 142968 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912     134217728     float       0   182894    2.94    2.94    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.93543 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 143108 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     268435456     float       0   366281    2.93    2.93    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.93147 
+#
+# nThread 8 nGpus 1 minBytes 2147483648 maxBytes 2147483648 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 143273 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  2147483648     536870912     float       0   733521    2.93    2.93    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.92764 
+#
+# nThread 8 nGpus 1 minBytes 4294967296 maxBytes 4294967296 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  0 [0x0e] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  1 [0x0f] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  2 [0x12] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  3 [0x17] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  4 [0x18] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  5 [0x1b] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  6 [0x1f] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid 143423 on notebook-b97f21b4-8cad-4c00-958e-72d3617fcab2-0 device  7 [0x27] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                       (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  4294967296    1073741824     float       0  1467988    2.93    2.93    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.92575 
+#
