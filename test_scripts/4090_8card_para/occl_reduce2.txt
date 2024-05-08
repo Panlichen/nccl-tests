@@ -1,0 +1,513 @@
+# nThread 8 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  26766 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  26766 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  26766 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  26766 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  26766 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  26766 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  26766 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  26766 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64            16     float     sum       0    31.90    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00200632 
+#
+# nThread 8 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27140 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  27140 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  27140 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  27140 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  27140 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  27140 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  27140 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  27140 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128            32     float     sum       0    23.02    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00556122 
+#
+# nThread 8 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27512 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  27512 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  27512 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  27512 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  27512 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  27512 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  27512 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  27512 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256            64     float     sum       0    32.12    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00797079 
+#
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27850 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  27850 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  27850 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  27850 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  27850 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  27850 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  27850 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  27850 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512           128     float     sum       0    20.37    0.03    0.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0251339 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28229 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  28229 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  28229 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  28229 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  28229 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  28229 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  28229 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  28229 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           256     float     sum       0    28.30    0.04    0.04    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0361844 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28569 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  28569 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  28569 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  28569 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  28569 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  28569 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  28569 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  28569 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           512     float     sum       0    19.69    0.10    0.10    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.103993 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28961 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  28961 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  28961 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  28961 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  28961 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  28961 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  28961 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  28961 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096          1024     float     sum       0    24.09    0.17    0.17    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.17004 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  29316 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  29316 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  29316 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  29316 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  29316 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  29316 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  29316 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  29316 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          2048     float     sum       0    21.45    0.38    0.38    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.381904 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  29653 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  29653 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  29653 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  29653 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  29653 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  29653 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  29653 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  29653 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          4096     float     sum       0    22.21    0.74    0.74    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.73755 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  30027 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  30027 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  30027 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  30027 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  30027 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  30027 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  30027 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  30027 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          8192     float     sum       0    26.56    1.23    1.23    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.23369 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  30381 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  30381 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  30381 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  30381 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  30381 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  30381 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  30381 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  30381 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536         16384     float     sum       0    33.99    1.93    1.93    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.92804 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  30720 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  30720 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  30720 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  30720 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  30720 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  30720 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  30720 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  30720 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         32768     float     sum       0    43.91    2.98    2.98    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.9847 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  31056 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  31056 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  31056 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  31056 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  31056 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  31056 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  31056 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  31056 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         65536     float     sum       0   1493.5    0.18    0.18    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.17552 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  31427 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  31427 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  31427 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  31427 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  31427 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  31427 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  31427 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  31427 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288        131072     float     sum       0    94.33    5.56    5.56    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 5.55789 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  31772 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  31772 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  31772 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  31772 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  31772 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  31772 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  31772 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  31772 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        262144     float     sum       0    161.0    6.51    6.51    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 6.51261 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  32151 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  32151 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  32151 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  32151 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  32151 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  32151 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  32151 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  32151 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        524288     float     sum       0    403.9    5.19    5.19    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 5.19267 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  32493 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  32493 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  32493 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  32493 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  32493 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  32493 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  32493 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  32493 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304       1048576     float     sum       0    416.2   10.08   10.08    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 10.0786 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  32865 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  32865 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  32865 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  32865 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  32865 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  32865 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  32865 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  32865 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       2097152     float     sum       0    621.4   13.50   13.50    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 13.4994 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  33236 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  33236 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  33236 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  33236 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  33236 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  33236 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  33236 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  33236 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       4194304     float     sum       0   1191.2   14.08   14.08    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 14.0838 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  33575 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  33575 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  33575 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  33575 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  33575 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  33575 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  33575 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  33575 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       8388608     float     sum       0   2330.7   14.40   14.40    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 14.3966 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  33912 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  33912 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  33912 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  33912 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  33912 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  33912 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  33912 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  33912 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864      16777216     float     sum       0   4562.0   14.71   14.71    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 14.7104 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  34279 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  34279 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  34279 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  34279 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  34279 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  34279 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  34279 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  34279 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      33554432     float     sum       0   9055.2   14.82   14.82    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 14.8221 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  34665 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  34665 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  34665 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  34665 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  34665 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  34665 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  34665 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  34665 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      67108864     float     sum       0    17992   14.92   14.92    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 14.9195 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  35021 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  35021 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  35021 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  35021 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  35021 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  35021 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  35021 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  35021 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912     134217728     float     sum       0    35645   15.06   15.06    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.0614 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  35385 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  35385 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  35385 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  35385 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  35385 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  35385 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  35385 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  35385 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     268435456     float     sum       0    70722   15.18   15.18    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.1825 
+#
+# nThread 8 nGpus 1 minBytes 2147483648 maxBytes 2147483648 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  35826 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  35826 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  35826 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  35826 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  35826 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  35826 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  35826 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  35826 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  2147483648     536870912     float     sum       0   140146   15.32   15.32    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.3232 
+#
+# nThread 8 nGpus 1 minBytes 4294967296 maxBytes 4294967296 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  36268 on      g0419 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  36268 on      g0419 device  1 [0x25] NVIDIA GeForce RTX 4090
+#   Rank  2 Pid  36268 on      g0419 device  2 [0x41] NVIDIA GeForce RTX 4090
+#   Rank  3 Pid  36268 on      g0419 device  3 [0x61] NVIDIA GeForce RTX 4090
+#   Rank  4 Pid  36268 on      g0419 device  4 [0x81] NVIDIA GeForce RTX 4090
+#   Rank  5 Pid  36268 on      g0419 device  5 [0xa1] NVIDIA GeForce RTX 4090
+#   Rank  6 Pid  36268 on      g0419 device  6 [0xc1] NVIDIA GeForce RTX 4090
+#   Rank  7 Pid  36268 on      g0419 device  7 [0xe1] NVIDIA GeForce RTX 4090
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  4294967296    1073741824     float     sum       0   281578   15.25   15.25    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.2532 
+#

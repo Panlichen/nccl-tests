@@ -1,0 +1,351 @@
+# nThread 2 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  11464 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  11464 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64             8     float   1219.7    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.62357e-05 
+#
+# nThread 2 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  11656 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  11656 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128            16     float    17.74    0.01    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00360783 
+#
+# nThread 2 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  11761 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  11761 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256            32     float   3840.1    0.00    0.00    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 3.33324e-05 
+#
+# nThread 2 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  11909 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  11909 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512            64     float    18.17    0.03    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0140927 
+#
+# nThread 2 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12032 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12032 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           128     float    18.58    0.06    0.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0275592 
+#
+# nThread 2 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12139 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12139 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           256     float    18.24    0.11    0.06    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0561545 
+#
+# nThread 2 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12255 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12255 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096           512     float    22.24    0.18    0.09    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0920859 
+#
+# nThread 2 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12436 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12436 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          1024     float    20.15    0.41    0.20    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.203263 
+#
+# nThread 2 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12553 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12553 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          2048     float    26.85    0.61    0.31    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.30515 
+#
+# nThread 2 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12681 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12681 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          4096     float    44.73    0.73    0.37    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.36631 
+#
+# nThread 2 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12825 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12825 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536          8192     float    24.90    2.63    1.32    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.31583 
+#
+# nThread 2 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  12949 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  12949 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         16384     float    29.97    4.37    2.19    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.18681 
+#
+# nThread 2 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13055 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13055 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         32768     float    11952    0.02    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0109668 
+#
+# nThread 2 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13205 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13205 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288         65536     float    57.25    9.16    4.58    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.5788 
+#
+# nThread 2 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13367 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13367 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        131072     float    81.39   12.88    6.44    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 6.44193 
+#
+# nThread 2 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13474 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13474 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        262144     float    142.1   14.76    7.38    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 7.37855 
+#
+# nThread 2 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13624 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13624 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304        524288     float    277.5   15.11    7.56    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 7.55749 
+#
+# nThread 2 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13743 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13743 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       1048576     float    470.8   17.82    8.91    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 8.90924 
+#
+# nThread 2 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  13848 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  13848 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       2097152     float   5130.3    3.27    1.64    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.63511 
+#
+# nThread 2 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14005 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14005 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       4194304     float   1523.5   22.02   11.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.012 
+#
+# nThread 2 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14111 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14111 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864       8388608     float   3716.3   18.06    9.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 9.02901 
+#
+# nThread 2 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14222 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14222 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      16777216     float   7624.0   17.60    8.80    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 8.80234 
+#
+# nThread 2 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14373 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14373 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      33554432     float    21670   12.39    6.19    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 6.1936 
+#
+# nThread 2 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14495 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14495 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912      67108864     float    29928   17.94    8.97    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 8.96927 
+#
+# nThread 2 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14657 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14657 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     134217728     float    61024   17.60    8.80    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 8.79771 
+#
+# nThread 2 nGpus 1 minBytes 2147483648 maxBytes 2147483648 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  14873 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  14873 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  2147483648     268435456     float   120765   17.78    8.89    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 8.89119 
+#
+# nThread 2 nGpus 1 minBytes 4294967296 maxBytes 4294967296 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  15091 on      g0180 device  0 [0x01] NVIDIA GeForce RTX 4090
+#   Rank  1 Pid  15091 on      g0180 device  1 [0xc1] NVIDIA GeForce RTX 4090
+#
+#                                               out-of-place                       in-place          
+#       size         count      type     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  4294967296     536870912     float   244588   17.56    8.78    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 8.78 
+#
