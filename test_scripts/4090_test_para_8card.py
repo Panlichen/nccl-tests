@@ -11,7 +11,7 @@ ops_str=['all_reduce','all_gather','broadcast','reduce','reduce_scatter']
 buffer_sizes = ["64", "128", "256", "512", "1K", "2K", "4K", "8K", "16K", "32K", "64K", "128K", "256K", "512K", "1M", "2M", "4M", "8M", "16M", "32M","64M","128M","256M","512M","1G","2G","4G"]
 # 设置环境变量
 def setEnv():
-    os.environ['LD_LIBRARY_PATH'] = "/data/run01/scw6cab/OCCL/ofccl/build/lib:/data/apps/cuda/12.1/lib64"
+    os.environ['LD_LIBRARY_PATH'] = "/data/run01/scw6cab/OCCL/ofccl/build/lib:/data/apps/cuda/11.8/lib64"
     # os.system("which mpirun")
         
     # os.environ['LD_LIBRARY_PATH'] = "/data/home/panlichen/zrk/ofcclProj/ofccl/build/lib/:/data/home/panlichen/zrk/mpi/lib/"
