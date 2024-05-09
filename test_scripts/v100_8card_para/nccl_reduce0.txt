@@ -1,0 +1,513 @@
+# nThread 8 nGpus 1 minBytes 64 maxBytes 64 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  26388 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  26388 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  26388 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  26388 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  26388 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  26388 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  26388 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  26388 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+          64            16     float     sum       0    12.56    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00509412 
+#
+# nThread 8 nGpus 1 minBytes 128 maxBytes 128 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  26611 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  26611 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  26611 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  26611 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  26611 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  26611 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  26611 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  26611 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         128            32     float     sum       0    13.51    0.01    0.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.00947773 
+#
+# nThread 8 nGpus 1 minBytes 256 maxBytes 256 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  26829 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  26829 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  26829 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  26829 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  26829 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  26829 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  26829 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  26829 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         256            64     float     sum       0    12.19    0.02    0.02    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0209956 
+#
+# nThread 8 nGpus 1 minBytes 512 maxBytes 512 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27043 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  27043 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  27043 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  27043 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  27043 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  27043 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  27043 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  27043 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+         512           128     float     sum       0    14.80    0.03    0.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.034589 
+#
+# nThread 8 nGpus 1 minBytes 1024 maxBytes 1024 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27247 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  27247 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  27247 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  27247 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  27247 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  27247 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  27247 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  27247 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        1024           256     float     sum       0    13.89    0.07    0.07    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.0737228 
+#
+# nThread 8 nGpus 1 minBytes 2048 maxBytes 2048 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27500 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  27500 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  27500 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  27500 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  27500 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  27500 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  27500 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  27500 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        2048           512     float     sum       0    12.62    0.16    0.16    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.162308 
+#
+# nThread 8 nGpus 1 minBytes 4096 maxBytes 4096 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27692 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  27692 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  27692 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  27692 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  27692 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  27692 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  27692 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  27692 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        4096          1024     float     sum       0    16.73    0.24    0.24    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.244882 
+#
+# nThread 8 nGpus 1 minBytes 8192 maxBytes 8192 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  27863 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  27863 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  27863 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  27863 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  27863 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  27863 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  27863 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  27863 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+        8192          2048     float     sum       0    20.53    0.40    0.40    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.398944 
+#
+# nThread 8 nGpus 1 minBytes 16384 maxBytes 16384 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28107 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  28107 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  28107 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  28107 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  28107 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  28107 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  28107 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  28107 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       16384          4096     float     sum       0    18.79    0.87    0.87    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 0.871989 
+#
+# nThread 8 nGpus 1 minBytes 32768 maxBytes 32768 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28314 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  28314 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  28314 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  28314 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  28314 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  28314 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  28314 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  28314 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       32768          8192     float     sum       0    20.94    1.56    1.56    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.56495 
+#
+# nThread 8 nGpus 1 minBytes 65536 maxBytes 65536 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28543 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  28543 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  28543 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  28543 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  28543 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  28543 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  28543 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  28543 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+       65536         16384     float     sum       0    33.94    1.93    1.93    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.93066 
+#
+# nThread 8 nGpus 1 minBytes 131072 maxBytes 131072 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  28745 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  28745 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  28745 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  28745 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  28745 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  28745 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  28745 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  28745 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      131072         32768     float     sum       0    46.26    2.83    2.83    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 2.83331 
+#
+# nThread 8 nGpus 1 minBytes 262144 maxBytes 262144 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  29002 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  29002 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  29002 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  29002 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  29002 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  29002 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  29002 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  29002 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      262144         65536     float     sum       0    52.28    5.01    5.01    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 5.01398 
+#
+# nThread 8 nGpus 1 minBytes 524288 maxBytes 524288 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  31856 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  31856 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  31856 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  31856 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  31856 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  31856 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  31856 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  31856 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+      524288        131072     float     sum       0    66.93    7.83    7.83    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 7.83343 
+#
+# nThread 8 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  32885 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  32885 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  32885 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  32885 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  32885 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  32885 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  32885 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  32885 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     1048576        262144     float     sum       0    90.64   11.57   11.57    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 11.5684 
+#
+# nThread 8 nGpus 1 minBytes 2097152 maxBytes 2097152 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  33117 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  33117 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  33117 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  33117 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  33117 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  33117 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  33117 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  33117 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     2097152        524288     float     sum       0    139.5   15.03   15.03    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 15.0295 
+#
+# nThread 8 nGpus 1 minBytes 4194304 maxBytes 4194304 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  34135 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  34135 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  34135 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  34135 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  34135 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  34135 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  34135 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  34135 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     4194304       1048576     float     sum       0    229.7   18.26   18.26    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 18.2612 
+#
+# nThread 8 nGpus 1 minBytes 8388608 maxBytes 8388608 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  34396 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  34396 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  34396 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  34396 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  34396 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  34396 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  34396 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  34396 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+     8388608       2097152     float     sum       0    353.7   23.72   23.72    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 23.716 
+#
+# nThread 8 nGpus 1 minBytes 16777216 maxBytes 16777216 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  35367 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  35367 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  35367 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  35367 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  35367 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  35367 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  35367 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  35367 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    16777216       4194304     float     sum       0    442.2   37.94   37.94    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 37.9407 
+#
+# nThread 8 nGpus 1 minBytes 33554432 maxBytes 33554432 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  35600 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  35600 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  35600 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  35600 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  35600 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  35600 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  35600 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  35600 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    33554432       8388608     float     sum       0    574.1   58.44   58.44    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 58.4434 
+#
+# nThread 8 nGpus 1 minBytes 67108864 maxBytes 67108864 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  35905 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  35905 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  35905 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  35905 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  35905 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  35905 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  35905 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  35905 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+    67108864      16777216     float     sum       0    836.6   80.22   80.22    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 80.2151 
+#
+# nThread 8 nGpus 1 minBytes 134217728 maxBytes 134217728 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  36179 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  36179 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  36179 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  36179 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  36179 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  36179 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  36179 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  36179 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   134217728      33554432     float     sum       0   1346.9   99.65   99.65    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 99.6458 
+#
+# nThread 8 nGpus 1 minBytes 268435456 maxBytes 268435456 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  36465 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  36465 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  36465 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  36465 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  36465 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  36465 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  36465 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  36465 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   268435456      67108864     float     sum       0   2364.5  113.53  113.53    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 113.528 
+#
+# nThread 8 nGpus 1 minBytes 536870912 maxBytes 536870912 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  36698 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  36698 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  36698 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  36698 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  36698 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  36698 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  36698 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  36698 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+   536870912     134217728     float     sum       0   4395.2  122.15  122.15    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 122.15 
+#
+# nThread 8 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  36947 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  36947 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  36947 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  36947 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  36947 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  36947 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  36947 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  36947 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  1073741824     268435456     float     sum       0   8393.6  127.92  127.92    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 127.924 
+#
+# nThread 8 nGpus 1 minBytes 2147483648 maxBytes 2147483648 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  37201 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  37201 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  37201 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  37201 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  37201 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  37201 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  37201 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  37201 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  2147483648     536870912     float     sum       0    16477  130.34  130.34    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 130.335 
+#
+# nThread 8 nGpus 1 minBytes 4294967296 maxBytes 4294967296 step: 2(factor) warmup iters: 2 iters: 5 validation: 0 
+#
+# Using devices
+#   Rank  0 Pid  37457 on      g0029 device  0 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  1 Pid  37457 on      g0029 device  1 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  2 Pid  37457 on      g0029 device  2 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  3 Pid  37457 on      g0029 device  3 [0x0b] Tesla V100-SXM2-32GB
+#   Rank  4 Pid  37457 on      g0029 device  4 [0x41] Tesla V100-SXM2-32GB
+#   Rank  5 Pid  37457 on      g0029 device  5 [0x41] Tesla V100-SXM2-32GB
+#   Rank  6 Pid  37457 on      g0029 device  6 [0x41] Tesla V100-SXM2-32GB
+#   Rank  7 Pid  37457 on      g0029 device  7 [0x41] Tesla V100-SXM2-32GB
+#
+#                                                       out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw  error     time   algbw   busbw  error
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+  4294967296    1073741824     float     sum       0    32422  132.47  132.47    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 132.47 
+#

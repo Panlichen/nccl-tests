@@ -41,6 +41,9 @@ if [ "$BINARY" == "DEBUG" ];then
     export WARMITER=2
     export MITER=1
     export CHECK=0
+    # if [ $MY_NUM_DEV = 2 ]; then
+    #     export CUDA_VISIBLE_DEVICES=0,4
+    # fi
 elif [ "$BINARY" == "PERF" ];then
     if [ $MY_NUM_DEV = 4 ]; then
         export CUDA_VISIBLE_DEVICES=0,1,4,5
