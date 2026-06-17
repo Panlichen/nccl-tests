@@ -2,14 +2,18 @@ clear
 
 export MY_NUM_DEV=$1
 
-# export LD_LIBRARY_PATH=/home/panlichen/work2/ofccl/build/lib
 export NCCL_PROTO=Simple
 export NCCL_ALGO=Ring
 # export NCCL_MAX_NCHANNELS=1
 # export NCCL_MIN_NCHANNELS=1
 # export NCCL_NTHREADS=64
-rm -rf /home/panlichen/work2/ofccl/log
-mkdir -p /home/panlichen/work2/ofccl/log/nsys
+
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+OFCCL_HOME=$(cd "$SCRIPT_DIR/../ofccl" && pwd)
+OCCL_LOG_DIR="$OFCCL_HOME/log"
+
+rm -rf "$OCCL_LOG_DIR"
+mkdir -p "$OCCL_LOG_DIR/nsys"
 
 if [ -z $BINARY ];then
     BINARY="DEBUG"
@@ -80,12 +84,11 @@ elif [ "$RUN_TYPE" == "GDB" ];then
     cmd="cuda-gdb $target"
     # set args -b 8M -e 8M -f 2 -t 2 -g 1 -n 1 -w 0 -c 0
 elif [ "$RUN_TYPE" == "NSYS" ];then
-    cmd="nsys profile -f true --trace=cuda,cudnn,cublas,osrt,nvtx -o /home/panlichen/work2/ofccl/log/nsys/$NSYS_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -m $MITER"
+    cmd="nsys profile -f true --trace=cuda,cudnn,cublas,osrt,nvtx -o $OCCL_LOG_DIR/nsys/$NSYS_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -m $MITER"
 elif [ "$RUN_TYPE" == "NCU" ];then
-    # cmd="ncu --nvtx -f -o /home/panlichen/work2/ofccl/log/nsys/$NCU_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -m $MITER"
+    # cmd="ncu --nvtx -f -o $OCCL_LOG_DIR/nsys/$NCU_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -m $MITER"
     cmd="ncu $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -m $MITER"
 fi
 
 echo cmd=$cmd
-$cmd #> /home/panlichen/work2/ofccl/nccl.log
-
+$cmd #> "$OFCCL_HOME/nccl.log"

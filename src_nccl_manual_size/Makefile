@@ -42,11 +42,15 @@ CUDA_GENCODE_h800   = -gencode=arch=compute_89,code=sm_89 \
                       -gencode=arch=compute_90,code=sm_90 \
                       -gencode=arch=compute_90a,code=sm_90a
 
-CARDNAME ?= 3080
+CUDA_GENCODE_4090   = -gencode=arch=compute_89,code=sm_89
+
+CARDNAME ?= 4090
 ifeq ($(CARDNAME), 3080)
 NVCC_GENCODE ?= $(CUDA_GENCODE_3080) $(CUDA_PTX_INUSE)
 else ifeq ($(CARDNAME), ampere)
 NVCC_GENCODE ?= $(CUDA_GENCODE_ampere) $(CUDA_PTX_INUSE)
+else ifeq ($(CARDNAME), 4090)
+NVCC_GENCODE ?= $(CUDA_GENCODE_4090)
 else ifeq ($(CARDNAME), h800)
 NVCC_GENCODE ?= $(CUDA_GENCODE_h800) $(CUDA_PTX_INUSE)
 else

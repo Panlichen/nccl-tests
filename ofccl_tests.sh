@@ -31,9 +31,14 @@ export BASE_CTX_SWITCH_THRESHOLD=200000
 export NUM_TRY_TASKQ_HEAD=6
 export DEV_TRY_ROUND=10
 export CHECK_REMAINING_SQE_INTERVAL=10000
-export DEBUG_FILE="/home/panlichen/work2/ofccl/log/oneflow_cpu_rank_"
-rm -rf /home/panlichen/work2/ofccl/log
-mkdir -p /home/panlichen/work2/ofccl/log/nsys
+
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+OFCCL_HOME=$(cd "$SCRIPT_DIR/../ofccl" && pwd)
+OCCL_LOG_DIR="$OFCCL_HOME/log"
+
+export DEBUG_FILE="$OCCL_LOG_DIR/oneflow_cpu_rank_"
+rm -rf "$OCCL_LOG_DIR"
+mkdir -p "$OCCL_LOG_DIR/nsys"
 
 # export ENABLE_VQ=1 # volunteer quit
 # export TOLERANT_FAIL_CHECK_SQ_CNT=5000
@@ -157,9 +162,9 @@ elif [ "$RUN_TYPE" == "GDB" ];then
     # set args -b 64 -e 64 -f 2 -t 2 -g 1 -n 1 -w 0 -c 0
     # set args -b 512 -e 512 -f 2 -t 4 -g 1 -n 1 -w 0 -c 0
 elif [ "$RUN_TYPE" == "NSYS" ];then
-    cmd="nsys profile -f true --trace=cuda,cudnn,cublas,osrt,nvtx -o /home/panlichen/work2/ofccl/log/nsys/$NSYS_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
+    cmd="nsys profile -f true --trace=cuda,cudnn,cublas,osrt,nvtx -o $OCCL_LOG_DIR/nsys/$NSYS_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
 elif [ "$RUN_TYPE" == "NCU" ];then
-    # cmd="ncu --nvtx -f -o /home/panlichen/work2/ofccl/log/nsys/$NCU_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
+    # cmd="ncu --nvtx -f -o $OCCL_LOG_DIR/nsys/$NCU_FILE $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
     cmd="ncu $target -b $NBYTES -e $NBYTES -f 2 -t $MY_NUM_DEV -g 1 -n $NITER -w $WARMITER -c $CHECK -M $MITER"
 fi
 
@@ -167,5 +172,4 @@ fi
 # export NCCL_DEBUG_SUBSYS=NET
 
 echo cmd=$cmd
-$cmd #> /home/panlichen/work2/ofccl/ofccl.log
-
+$cmd #> "$OFCCL_HOME/ofccl.log"
